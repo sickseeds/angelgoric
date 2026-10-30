@@ -3,16 +3,517 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image" href="/assets/S89ceBR.gif">
+  <link rel="icon" type="image" href="/assets/3628e352.gif">
     <link rel="stylesheet" href="styles.css">
-<title>AID//LOG — 心の掃き溜め</title>
+<title>AID//LOG</title>
 </head>
 <body>
 <div class="fx grain" aria-hidden="true"></div>
 <div class="fx scan" aria-hidden="true"></div>
 <div class="fx vignette" aria-hidden="true"></div>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+    <!-- ══════════ TOP AREA ══════════ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">✚</span>
+    <span class="btitle glitch" data-text="VOID//LOG">VOID//LOG</span>
+    <span class="sub">心の掃き溜め — no tw, take care</span>
+  </div>
+  <nav class="topnav">
+    <a href="#feed">feed</a>
+    <a href="#states">states</a>
+    <a href="#rules">rules</a>
+    <a href="#help">help</a>
+  </nav>
+  <div class="status">
+    <span class="dot"></span>
+    <span id="clock">--:--:--</span>
+    <span class="badge">RAW EMOTIONS</span>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>i'm still here <b>//</b> <i>still here, still here</i></span>
+    <span>寝れない <b>//</b> 3am again</span>
+    <span>do not perceive me <b>//</b> but also please look at me</span>
+    <span>too loud, too much <b>//</b> let it out, let it go</span>
+    <span>landmine girlboy <b>//</b> watch your step</span>
+    <span>screaming into the void since XXXX <b>//</b> it doesn't mind</span>
+    <span>i'm still here <b>//</b> <i>still here, still here</i></span>
+    <span>寝れない <b>//</b> 3am again</span>
+    <span>do not perceive me <b>//</b> but also please look at me</span>
+    <span>too loud, too much <b>//</b> let it out, let it go</span>
+    <span>landmine girlboy <b>//</b> watch your step</span>
+    <span>screaming into the void since XXXX <b>//</b> it doesn't mind</span>
+  </div>
+</div>
+
+<!-- ══════════ SHELL ══════════ -->
+<div class="shell">
+
+  <!-- ───── LEFT ───── -->
+  <aside class="col left">
+    <section class="box">
+      <h2>index <em>don't bother</em></h2>
+      <ul class="nav">
+        <li><a href="zero.html">about the webmaster</a></li>
+        <li><a href="rings.html">cliques / webrings</a></li>
+        <li><a href="misc.html">misc</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>counters <em>self-reported</em></h2>
+      <div class="stat"><span>days upright</span><b>07</b></div>
+      <div class="stat"><span>hours slept (last)</span><b>2.5</b></div>
+      <div class="stat"><span>showers this week</span><b>2</b></div>
+      <div class="stat"><span>times outside</span><b>1</b></div>
+      <div class="stat"><span>unread messages</span><b class="hot">100</b></div>
+      <div class="stat"><span>blurbs logged</span><b id="logcount">02</b></div>
+    </section>
+
+    <section class="box">
+      <h2>filter by tags <em>click to activate</em></h2>
+      <p class="tiny">select multiple. click again to clear. keeps until refresh.</p>
+      <div class="tags" id="tagfilters">
+        <span class="tagchip jp" data-tag="空洞">空洞</span>
+        <span class="tagchip jp" data-tag="不安">不安</span>
+        <span class="tagchip jp" data-tag="不眠">不眠</span>
+        <span class="tagchip jp" data-tag="過呼吸">過呼吸</span>
+        <span class="tagchip jp" data-tag="解離">解離</span>
+        <span class="tagchip jp" data-tag="希死念慮">希死念慮</span>
+        <span class="tagchip jp" data-tag="引きこもり">引きこもり</span>
+        <span class="tagchip" data-tag="UNSENT">UNSENT</span>
+        <span class="tagchip" data-tag="3AM">3AM</span>
+        <span class="tagchip" data-tag="SMALL WIN">SMALL WIN</span>
+      </div>
+      <div id="filterbanner" class="filter-banner" style="display:none"></div>
+    </section>
+
+    <section class="box">
+      <h2>now playing <em>Kasane Teto</em></h2>
+      <div class="np">
+        <div class="tr">Deconversion</div>
+        <div class="ar">on repeat — 777 plays today</div>
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section class="box sticky-note" id="rules">
+      <span class="tape" aria-hidden="true"></span>
+      <strong>HOUSE RULES</strong><br>
+      1. no performance.<br>
+      2. no fixing, no "have you tried-".<br>
+      3. write it ugly. write it raw.<br>
+      4. if it's in here, it's out of me.<br>
+      5. strangers: scroll to the bottom. <span class="bandage" aria-hidden="true"></span>
+    </section>
+  </aside>
+
+  <!-- ───── CENTRE ───── -->
+  <main class="col mid">
+
+    <section class="composer">
+      <label for="dump" class="tiny" style="display:block">type it, dump it, leave it.</label>
+      <textarea id="dump" placeholder="say the thing you can't say out loud. it doesn't have to make sense. it doesn't have to be brave."></textarea>
+      <div class="crow">
+        <button class="btn" id="release">release →</button>
+        <button class="btn ghost" id="wipe">wipe</button>
+        <span class="hint">stays on this device</span>
+      </div>
+    </section>
+
+
+
+    <section class="feed" id="feedlist">
+
+
+
+    </section>
+  </main>
+
+  <!-- ───── RIGHT ───── -->
+  <aside class="col right">
+
+    <section class="box" id="states">
+      <h2>states of being <em>● live</em></h2>
+      <p class="tiny">tap a row to push it up. tap past 5 to reset it to zero.</p>
+      <div id="moods"></div>
+      <div class="moodfoot">
+        load: <b id="loadnum">0</b>/60
+        <span class="dom" id="domstate">— nothing registered —</span>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>void meter <em>pressure valve</em></h2>
+      <button class="screambtn" id="scream">scream</button>
+      <div class="counter"><b id="scount">0</b> screams logged tonight</div>
+    </section>
+
+    <section class="box">
+      <h2>tonight's weather</h2>
+      <div class="stat"><span>inside</span><b>heavy brain fog</b></div>
+      <div class="stat"><span>outside</span><b>chilly</b></div>
+      <div class="stat"><span>forecast</span><b class="hot">no change</b></div>
+      <div class="stat"><span>curtains</span><b>semi-closed</b></div>
+    </section>
+
+    <section class="box">
+      <h2>things that help <em>sometimes</em></h2>
+      <ul class="nav">
+        <li><a href="#dump">write it down here</a></li>
+        <li><a href="#help">the number at the bottom</a></li>
+        <li><a href="/pages/aid.html">cold water on wrists</a></li>
+        <li><a href="#states">one song, lights off</a></li>
+        <li><a href="#states">text one person, one line</a></li>
+      </ul>
+      <p class="tiny" style="margin:10px 0 0">not a cure. just surviving.</p>
+    </section>
+  </aside>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="help">
+  <div class="fwrap">
+    <div class="fnote">
+      <h3>if you stumbled in here</h3>
+      <p>this page wasn't written for you. it's not a performance — the place i put things so they stop living in my chest.</p>
+      <p>but if you recognised yourself in any of it, that's worth something. you don't have to be "bad enough" to call. you don't have to be articulate. you can just say "i don't know why i called." they're used to it.</p>
+      <p class="sig">✚ void//log — no tw, no exit</p>
+    </div>
+
+    <div class="help">
+      <h4>someone to talk to — free, confidential, 24/7</h4>
+      <div class="helpgrid">
+        <div class="hcard">
+          <div class="r">United States</div>
+          <div class="n">988</div>
+          <div class="d">Call or text. Veterans press 1 · Spanish press 2 · LGBTQ+ youth under 25 press 3 or text YOUTH</div>
+        </div>
+        <div class="hcard">
+          <div class="r">UK &amp; Ireland</div>
+          <div class="n">116 123</div>
+          <div class="d">Samaritans — free from any phone, any hour. Or text SHOUT to 85258 in the UK.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Canada</div>
+          <div class="n">988</div>
+          <div class="d">Suicide Crisis Helpline — call or text.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Japan — English</div>
+          <div class="n">0800-300-8355</div>
+          <div class="d">TELL Lifeline (toll free). Chat also available on their site.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Japan — 日本語</div>
+          <div class="n">0570-783-556</div>
+          <div class="d">いのちの電話 / Inochi no Denwa. よりそいホットライン: 0120-279-338 (press 2 for non-Japanese).</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Australia</div>
+          <div class="n">13 11 14</div>
+          <div class="d">Lifeline Australia — 24/7 crisis support.</div>
+        </div>
+      </div>
+      <div class="more">
+        elsewhere → <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> lists free crisis lines in over 130 countries. If you're in immediate physical danger, call your local emergency number.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ========== CLOCK ========== */
+  var clock = document.getElementById('clock');
+  function tick(){
+    var d = new Date();
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    clock.textContent = p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());
+  }
+  tick(); setInterval(tick,1000);
+
+  /* ========== TAG FILTERING ========== */
+  var activeFilters = new Set();
+  var tagChips = document.querySelectorAll('#tagfilters .tagchip');
+  var blurbs = document.querySelectorAll('.blurb');
+  var divider = document.querySelector('.divider');
+  var banner = document.getElementById('filterbanner');
+  var feedCountEl = document.getElementById('feedcount');
+
+  // Restore saved filters (fails if localStorage blocked)
+  try{
+    var savedFilters = localStorage.getItem('voidlog.filters');
+    if(savedFilters){
+      var arr = JSON.parse(savedFilters);
+      if(Array.isArray(arr)){
+        arr.forEach(function(tag){ activeFilters.add(tag); });
+      }
+    }
+  }catch(e){}
+
+  function paintTagChips(){
+    tagChips.forEach(function(chip){
+      var tag = chip.dataset.tag;
+      if(activeFilters.has(tag)){
+        chip.classList.add('active');
+      }else{
+        chip.classList.remove('active');
+      }
+    });
+    updateFeed();
+    saveFilters();
+  }
+
+  tagChips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var tag = chip.dataset.tag;
+      if(activeFilters.has(tag)){
+        activeFilters.delete(tag);
+      }else{
+        activeFilters.add(tag);
+      }
+      paintTagChips();
+    });
+  });
+
+  function updateFeed(){
+    var filterArray = Array.from(activeFilters);
+
+    // Show/hide filter banner
+    if(filterArray.length > 0){
+      banner.style.display = 'flex';
+      banner.innerHTML = 'filtered by: ' + filterArray.join(' + ') +
+        '<span class="clear" id="clearfilters">clear all ×</span>';
+      document.getElementById('clearfilters').addEventListener('click', function(){
+        activeFilters.clear();
+        paintTagChips();
+      });
+    }else{
+      banner.style.display = 'none';
+    }
+
+    // Count visible entries
+    var visibleCount = 0;
+
+    // Filter blurbs (pinned always stays visible)
+    blurbs.forEach(function(blurb){
+      var blurbTags = (blurb.dataset.tags || '').split(' ').filter(Boolean);
+      var isPinned = blurb.classList.contains('pinned');
+
+      if(filterArray.length === 0){
+        // No filters = show all
+        blurb.classList.remove('hidden');
+        visibleCount++;
+      }else{
+        // Check if blurb matches any active filter
+        var matches = filterArray.some(function(tag){
+          return blurbTags.includes(tag);
+        });
+
+        if(matches || isPinned){
+          blurb.classList.remove('hidden');
+          visibleCount++;
+        }else{
+          blurb.classList.add('hidden');
+        }
+      }
+    });
+
+    // Dim the divider if no visible blorbs near it
+    if(divider){
+      var prev = divider.previousElementSibling;
+      var next = divider.nextElementSibling;
+      var dividerVisible = true;
+      if(prev && prev.classList.contains('blurb')){
+        dividerVisible = !prev.classList.contains('hidden');
+      }
+      if(next && next.classList.contains('blurb')){
+        dividerVisible = dividerVisible && !next.classList.contains('hidden');
+      }
+      divider.style.opacity = dividerVisible ? '1' : '0';
+    }
+
+    feedCountEl.textContent = visibleCount + ' entr' + (visibleCount === 1 ? 'y' : 'ies');
+  }
+
+  function saveFilters(){
+    try{
+      localStorage.setItem('voidlog.filters', JSON.stringify(Array.from(activeFilters)));
+    }catch(e){}
+  }
+
+  paintTagChips();
+
+  /* ========== MOOD PANEL ========== */
+  // Note to self: these labels must match the tag chips exactly for auto-tagging to work
+  var MOODS = [
+    {jp:'空洞',  en:'void'},
+    {jp:'不安',  en:'anxiety'},
+    {jp:'不眠',  en:'insomnia'},
+    {jp:'過呼吸', en:'panic'},
+    {jp:'解離',  en:'dissociation'},
+    {jp:'怒り',  en:'rage'},
+    {jp:'無気力', en:'apathy'},
+    {jp:'自傷衝動', en:'urge'},
+    {jp:'希死念慮', en:'ideation'},
+    {jp:'繋がりたい', en:'wanting'}
+  ];
+  var levels = MOODS.map(function(){ return 0; });
+
+  // Restore mood levels
+  try{
+    var saved = localStorage.getItem('voidlog.moods');
+    if(saved){
+      var arr = JSON.parse(saved);
+      if(Array.isArray(arr) && arr.length === levels.length) levels = arr;
+    }
+  }catch(e){}
+
+  var host = document.getElementById('moods');
+  var rows = [];
+
+  MOODS.forEach(function(m,i){
+    var row = document.createElement('div');
+    row.className = 'moodrow';
+    row.setAttribute('role','button');
+    row.setAttribute('tabindex','0');
+
+    var lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.innerHTML = m.jp + ' <small>' + m.en + '</small>';
+
+    var lv = document.createElement('div');
+    lv.className = 'lv';
+
+    var segs = document.createElement('div');
+    segs.className = 'segs';
+    for(var s=0;s<5;s++){ segs.appendChild(document.createElement('i')); }
+
+    row.appendChild(lb); row.appendChild(lv); row.appendChild(segs);
+    host.appendChild(row);
+    rows.push({row:row, lv:lv, segs:segs});
+
+    function bump(){
+      levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1;
+      paintMoods();
+    }
+    row.addEventListener('click', bump);
+    row.addEventListener('keydown', function(ev){
+      if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); bump(); }
+    });
+  });
+
+  function paintMoods(){
+    var total = 0, top = 0;
+    rows.forEach(function(r,i){
+      var v = levels[i];
+      total += v;
+      r.lv.textContent = v ? v + '/5' : '·';
+      var cells = r.segs.children;
+      for(var c=0;c<cells.length;c++){
+        cells[c].className = (c < v) ? 'on' : '';
+      }
+      if(v > levels[top]) top = i;
+    });
+    document.getElementById('loadnum').textContent = total;
+    var dom = document.getElementById('domstate');
+    if(total === 0){
+      dom.textContent = '— nothing registered —';
+    }else{
+      dom.textContent = MOODS[top].jp + ' / ' + MOODS[top].en + ' leads tonight';
+    }
+    document.documentElement.style.setProperty('--glow','rgba(255,95,158,'+(0.16 + Math.min(total,60)/60*0.34).toFixed(2)+')');
+    try{ localStorage.setItem('voidlog.moods', JSON.stringify(levels)); }catch(e){}
+  }
+  paintMoods();
+
+  /* ========== COMPOSER / RELEASE ========== */
+  var dump = document.getElementById('dump');
+  var list = document.getElementById('feedlist');
+  var logcount = document.getElementById('logcount');
+  var seq = 2; // start from current log
+
+  function nowStamp(){
+    var d = new Date();
+    return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+  }
+
+  function dominantTag(){
+    var top = -1, idx = -1;
+    levels.forEach(function(v,i){ if(v > top){ top = v; idx = i; } });
+    return (top > 0) ? MOODS[idx].jp : '';
+  }
+
+  function release(){
+    var text = dump.value.trim();
+    if(!text) return;
+    seq++;
+    var art = document.createElement('article');
+    art.className = 'blurb fresh';
+
+    var tags = dominantTag();
+    art.dataset.tags = tags;
+
+    var head = document.createElement('header');
+    var t = document.createElement('time');
+    t.textContent = nowStamp();
+    var tg = document.createElement('span');
+    tg.className = 'tg';
+    tg.textContent = tags || '未分類';
+    var ix = document.createElement('span');
+    ix.className = 'idx';
+    ix.textContent = '#' + String(seq).padStart(3,'0');
+    head.appendChild(t); head.appendChild(tg); head.appendChild(ix);
+
+    var p = document.createElement('p');
+    p.textContent = text;
+
+    var foot = document.createElement('footer');
+    foot.className = 'bfoot';
+    var a = document.createElement('span'); a.textContent = '↳ just released';
+    var b = document.createElement('span'); b.textContent = '↳ ' + text.length + ' chars out of my head';
+    foot.appendChild(a); foot.appendChild(b);
+
+    art.appendChild(head); art.appendChild(p); art.appendChild(foot);
+    list.insertBefore(art, list.firstChild);
+
+    dump.value = '';
+    logcount.textContent = String(seq).padStart(2,'0');
+    updateFeed(); // refresh counts after adding a log
+  }
+
+  document.getElementById('release').addEventListener('click', release);
+  document.getElementById('wipe').addEventListener('click', function(){ dump.value = ''; dump.focus(); });
+  dump.addEventListener('keydown', function(ev){
+    if((ev.ctrlKey || ev.metaKey) && ev.key === 'Enter') release();
+  });
+
+  /* ========== SCREAM BUTTON ========== */
+  var scount = document.getElementById('scount');
+  var n = 0;
+  var WORDS = ['ENOUGH','死ね！死ね！死ね！','!!!!!!','黙れ','NOISEY','AAAAAAAA!!'];
+  document.getElementById('scream').addEventListener('click', function(ev){
+    n++;
+    scount.textContent = n;
+    document.body.classList.add('shake');
+    setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
+
+    var f = document.createElement('span');
+    f.className = 'floaty';
+    f.textContent = WORDS[Math.floor(Math.random()*WORDS.length)];
+    f.style.left = (ev.clientX - 30) + 'px';
+    f.style.top  = (ev.clientY - 20) + 'px';
+    document.body.appendChild(f);
+    setTimeout(function(){ f.remove(); }, 1550);
+  });
+
+})();
+</script>
+</body>
 </html>
