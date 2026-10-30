@@ -528,13 +528,32 @@
   setInterval(fetchGlobalCounts, 30000);
 
   /* ========== SCREAM BUTTON ========== */
-  var screamBtn = document.getElementById('scream');
-  screamBtn.addEventListener('click', async function(){
-    document.body.classList.add('shake');
-    setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
-    await submitSignal('scream', null);
-    fetchGlobalCounts();
-  });
+  var scount = document.getElementById('scount');
+var screamBtn = document.getElementById('scream');
+var n = 0;
+var WORDS = ['AAAAAA','死ね！死ね！死ね！','!!!!!!','黙れ','NOISEY','AAAAAAAA'];
+
+screamBtn.addEventListener('click', async function(ev){
+  document.body.classList.add('shake');
+  setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
+
+  // Update local
+  n++;
+  scount.textContent = n;
+
+  // Create floating word particle
+  var f = document.createElement('span');
+  f.className = 'floaty';
+  f.textContent = WORDS[Math.floor(Math.random()*WORDS.length)];
+  f.style.left = (ev.clientX - 30) + 'px';
+  f.style.top  = (ev.clientY - 20) + 'px';
+  document.body.appendChild(f);
+  setTimeout(function(){ f.remove(); }, 1550);
+
+  // Send to Supabase
+  await submitSignal('scream', null);
+  fetchGlobalCounts();
+});
 
   // Initial paint
   paintMoods(false);
