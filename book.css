@@ -287,6 +287,16 @@ body.shake{animation:shake .42s cubic-bezier(.36,.07,.19,.97) both}
 .screambtn:active{transform:scale(.975)}
 .counter{font-family:var(--mono);font-size:10.5px;color:var(--ash-dim);letter-spacing:.14em;text-align:center;margin-top:8px;text-transform:uppercase}
 .counter b{color:var(--bone);font-size:15px}
+.floaty{
+  position:fixed;z-index:9998;pointer-events:none;font-family:var(--head);
+  color:var(--hot);font-size:20px;letter-spacing:.1em;text-shadow:0 0 16px var(--glow);
+  animation:rise 1.5s ease-out forwards;
+}
+@keyframes rise{
+  0%{opacity:0;transform:translateY(10px) scale(.8)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translateY(-110px) scale(1.15)}
+}
 
 /* ─── CRISIS MODAL ─── */
 .modal-overlay{

@@ -201,18 +201,15 @@
   </div>
 </footer>
 
-<!-- Supabase Client Library -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (function(){
   "use strict";
 
-  /* ========== SUPABASE CONFIG ========== */
   const SUPABASE_URL = 'https://ukfusyimtoxoslgwmjlw.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_3MFqY8YLtrICtxsFHh4wMg_Qp47EvHw';
   const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-  /* ========== CRISS KEYWORDS ========== */
   const CRISIS_KEYWORDS = [
     'suicide', 'kill myself', 'end it', 'dead', 'die', 'dying',
     'cannot go on', 'give up', 'want to die', 'better off dead',
@@ -234,31 +231,17 @@
   var closeBtn = document.getElementById('closeCrisis');
   var stayBtn = document.getElementById('stayWrite');
 
-  function showCrisis(){
-    modal.classList.add('visible');
-    modal.setAttribute('aria-hidden', 'false');
-  }
-
-  function hideCrisis(){
-    modal.classList.remove('visible');
-    modal.setAttribute('aria-hidden', 'true');
-  }
-
+  function showCrisis(){ modal.classList.add('visible'); modal.setAttribute('aria-hidden', 'false'); }
+  function hideCrisis(){ modal.classList.remove('visible'); modal.setAttribute('aria-hidden', 'true'); }
   closeBtn.addEventListener('click', hideCrisis);
   stayBtn.addEventListener('click', hideCrisis);
-  modal.addEventListener('click', function(e){
-    if(e.target === modal) hideCrisis();
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') hideCrisis();
-  });
+  modal.addEventListener('click', function(e){ if(e.target === modal) hideCrisis(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') hideCrisis(); });
 
   function checkCrisis(text){
     var matches = 0;
     var lower = text.toLowerCase();
-    CRISIS_KEYWORDS.forEach(function(kw){
-      if(lower.indexOf(kw) !== -1) matches++;
-    });
+    CRISIS_KEYWORDS.forEach(function(kw){ if(lower.indexOf(kw) !== -1) matches++; });
     return matches >= CRISIS_THRESHOLD;
   }
 
@@ -285,18 +268,15 @@
 
   function renderEntries(entries){
     gblist.innerHTML = '';
-
     if(!entries || entries.length === 0){
       gbempty.style.display = 'block';
       gblist.appendChild(gbempty);
       feedCountEl.textContent = '0 entries';
       return;
     }
-
     entries.forEach(function(entry, i){
       var art = document.createElement('article');
       art.className = 'gb-entry';
-
       var head = document.createElement('header');
       var t = document.createElement('time');
       t.textContent = timeAgo(entry.created_at);
@@ -307,80 +287,56 @@
       idx.className = 'idx';
       idx.textContent = '#' + String(entries.length - i).padStart(3, '0');
       head.appendChild(t); head.appendChild(anon); head.appendChild(idx);
-
       var p = document.createElement('p');
       p.textContent = entry.message;
-
-      art.appendChild(head);
-      art.appendChild(p);
+      art.appendChild(head); art.appendChild(p);
       gblist.appendChild(art);
     });
-
     feedCountEl.textContent = entries.length + ' entr' + (entries.length === 1 ? 'y' : 'ies');
   }
 
   async function fetchEntries(){
     try{
-      var { data, error } = await supabase
-        .from('guestbook')
-        .select('id, message, created_at')
-        .eq('approved', true)
-        .order('created_at', { ascending: false })
-        .limit(50);
-
-      if(error){
-        console.warn('Fetch failed:', error);
-        return;
-      }
+      var { data, error } = await supabase.from('guestbook').select('id, message, created_at').eq('approved', true).order('created_at', { ascending: false }).limit(50);
+      if(error){ console.warn('Fetch failed:', error); return; }
       renderEntries(data);
-    }catch(err){
-      console.warn('Fetch error:', err);
-    }
+    }catch(err){ console.warn('Fetch error:', err); }
   }
 
   async function submitEntry(){
     if(isSubmitting) return;
     var text = gbtext.value.trim();
     if(!text) return;
-
     isSubmitting = true;
     submitBtn.disabled = true;
     submitBtn.textContent = 'leaving it...';
-
     try{
-      var { error } = await supabase
-        .from('guestbook')
-        .insert([{ message: text }]);
-
+      var { error } = await supabase.from('guestbook').insert([{ message: text }]);
       if(error){
         if(String(error.message).indexOf('rate limit') !== -1){
-          alert("too many entries from your address this hour. come back later — the page will wait for you.");
+          alert("too many entries from your address this hour. come back later.");
         }else{
           console.error('Submit error:', error);
-          alert("something went wrong on my end. your words weren't lost — copy them before trying again.");
+          alert("something went wrong. your words weren't lost — copy them and try again.");
         }
       }else{
         gbtext.value = '';
         charcountEl.textContent = '0/800';
-        if(checkCrisis(text)){
-          showCrisis();
-        }else{
+        if(checkCrisis(text)){ showCrisis(); }
+        else{
           var note = document.createElement('div');
           note.className = 'gb-entry';
           note.style.borderLeftColor = 'var(--hot)';
           var np = document.createElement('p');
-          np.textContent = 'left it. it\'ll show up here once it\'s been looked at — usually quickly. thank you for trusting this little corner with it.';
+          np.textContent = 'left it. it\'ll show up here once it\'s been looked at.';
           note.appendChild(np);
           gblist.insertBefore(note, gblist.firstChild);
-          setTimeout(function(){
-            if(note.parentNode) note.remove();
-            fetchEntries();
-          }, 5000);
+          setTimeout(function(){ if(note.parentNode) note.remove(); fetchEntries(); }, 5000);
         }
       }
     }catch(err){
       console.error('Submit exception:', err);
-      alert("couldn't reach the shelf. check your connection, or just try again — your words aren't lost.");
+      alert("couldn't reach the shelf. check your connection and try again.");
     }finally{
       isSubmitting = false;
       submitBtn.disabled = false;
@@ -390,76 +346,43 @@
 
   submitBtn.addEventListener('click', submitEntry);
   document.getElementById('wipeGb').addEventListener('click', function(){ gbtext.value = ''; charcountEl.textContent = '0/800'; gbtext.focus(); });
-
-  gbtext.addEventListener('input', function(){
-    charcountEl.textContent = gbtext.value.length + '/800';
-  });
-
-  gbtext.addEventListener('keydown', function(ev){
-    if((ev.ctrlKey || ev.metaKey) && ev.key === 'Enter') submitEntry();
-  });
-
+  gbtext.addEventListener('input', function(){ charcountEl.textContent = gbtext.value.length + '/800'; });
+  gbtext.addEventListener('keydown', function(ev){ if((ev.ctrlKey || ev.metaKey) && ev.key === 'Enter') submitEntry(); });
   fetchEntries();
   setInterval(fetchEntries, 30000);
 
   /* ========== MOOD PANEL ========== */
   var MOODS = [
-    {jp:'空洞',  en:'void'},
-    {jp:'不安',  en:'anxiety'},
-    {jp:'不眠',  en:'insomnia'},
-    {jp:'過呼吸', en:'panic'},
-    {jp:'解離',  en:'dissociation'},
-    {jp:'怒り',  en:'rage'},
-    {jp:'無気力', en:'apathy'},
-    {jp:'自傷衝動', en:'urge'},
-    {jp:'希死念慮', en:'ideation'},
+    {jp:'空洞', en:'void'}, {jp:'不安', en:'anxiety'}, {jp:'不眠', en:'insomnia'},
+    {jp:'過呼吸', en:'panic'}, {jp:'解離', en:'dissociation'}, {jp:'怒り', en:'rage'},
+    {jp:'無気力', en:'apathy'}, {jp:'自傷衝動', en:'urge'}, {jp:'希死念慮', en:'ideation'},
     {jp:'繋がりたい', en:'wanting'}
   ];
   var levels = MOODS.map(function(){ return 0; });
-
   try{
     var saved = localStorage.getItem('voidlog.moods');
-    if(saved){
-      var arr = JSON.parse(saved);
-      if(Array.isArray(arr) && arr.length === levels.length) levels = arr;
-    }
+    if(saved){ var arr = JSON.parse(saved); if(Array.isArray(arr) && arr.length === levels.length) levels = arr; }
   }catch(e){}
-
   var host = document.getElementById('moods');
   var rows = [];
-
   MOODS.forEach(function(m,i){
     var row = document.createElement('div');
     row.className = 'moodrow';
     row.setAttribute('role','button');
     row.setAttribute('tabindex','0');
-
     var lb = document.createElement('div');
     lb.className = 'lb';
     lb.innerHTML = m.jp + ' <small>' + m.en + '</small>';
-
     var lv = document.createElement('div');
     lv.className = 'lv';
-
     var segs = document.createElement('div');
-    segs.className = 'segs';  // ← FIXED: was "seges" before
+    segs.className = 'segs';
     for(var s=0;s<5;s++){ segs.appendChild(document.createElement('i')); }
-
     row.appendChild(lb); row.appendChild(lv); row.appendChild(segs);
     host.appendChild(row);
     rows.push({row:row, lv:lv, segs:segs});
-
-    row.addEventListener('click', function(){
-      levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1;
-      paintMoods(true);
-    });
-    row.addEventListener('keydown', function(ev){
-      if(ev.key === 'Enter' || ev.key === ' '){
-        ev.preventDefault();
-        levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1;
-        paintMoods(true);
-      }
-    });
+    row.addEventListener('click', function(){ levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1; paintMoods(true); });
+    row.addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1; paintMoods(true); }});
   });
 
   async function paintMoods(sendSignal){
@@ -469,93 +392,65 @@
       total += v;
       r.lv.textContent = v ? v + '/5' : '·';
       var cells = r.segs.children;
-      for(var c=0;c<cells.length;c++){
-        cells[c].className = (c < v) ? 'on' : '';
-      }
+      for(var c=0;c<cells.length;c++){ cells[c].className = (c < v) ? 'on' : ''; }
       if(v > levels[top]) top = i;
     });
     document.getElementById('loadnum').textContent = total;
     var dom = document.getElementById('domstate');
-    if(total === 0){
-      dom.textContent = '— nothing registered —';
-    }else{
-      dom.textContent = MOODS[top].jp + ' / ' + MOODS[top].en + ' leads tonight';
-    }
+    dom.textContent = total === 0 ? '— nothing registered —' : MOODS[top].jp + ' / ' + MOODS[top].en + ' leads tonight';
     document.documentElement.style.setProperty('--glow','rgba(255,95,158,'+(0.16 + Math.min(total,60)/60*0.34).toFixed(2)+')');
-
-    if(sendSignal && total > 0){
-      await submitSignal('mood', MOODS[top].jp);
-    }
-
+    if(sendSignal && total > 0){ await submitSignal('mood', MOODS[top].jp); }
     try{ localStorage.setItem('voidlog.moods', JSON.stringify(levels)); }catch(e){}
   }
 
   async function submitSignal(kind, moodKey){
-    try{
-      var { error } = await supabase.from('signals').insert([{
-        kind: kind,
-        mood_key: moodKey || null
-      }]);
-      if(error) console.warn('Signal error:', error);
-    }catch(err){
-      console.warn('Signal submit failed:', err);
-    }
+    try{ var { error } = await supabase.from('signals').insert([{ kind: kind, mood_key: moodKey || null }]); if(error) console.warn('Signal error:', error); }
+    catch(err){ console.warn('Signal submit failed:', err); }
   }
+
+  /* ========== SCREAM COUNTER ========== */
+  var scount = document.getElementById('scount');
+  var screamBtn = document.getElementById('scream');
+  var WORDS = ['AAAAAA','死ね！死ね！死ね！','!!!!!!','黙れ','NOISEY','AAAAAAAA'];
+  var serverTotal = 0;
+
+  function paintScreams(){ scount.textContent = serverTotal; }
 
   async function fetchGlobalCounts(){
     try{
       var { data, error } = await supabase.rpc('signal_totals', { p_hours: 1 });
-      if(error){
-        console.warn('Counter fetch failed:', error);
-        return;
-      }
+      if(error){ console.warn('Counter fetch failed:', error); return; }
       if(data && data.length > 0){
-        var totalScreams = 0;
-        data.forEach(function(row){
-          if(row.kind === 'scream'){
-            totalScreams += row.total;
-          }
-        });
-        var scount = document.getElementById('scount');
-        if(scount) scount.textContent = totalScreams;
+        var total = 0;
+        data.forEach(function(row){ if(row.kind === 'scream') total += row.total; });
+        serverTotal = total;
+        paintScreams();
       }
-    }catch(err){
-      console.warn('Counter fetch error:', err);
-    }
+    }catch(err){ console.warn('Counter fetch error:', err); }
   }
 
+  screamBtn.addEventListener('click', async function(ev){
+    document.body.classList.add('shake');
+    setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
+
+    serverTotal++;
+    paintScreams();
+
+    var f = document.createElement('span');
+    f.className = 'floaty';
+    f.textContent = WORDS[Math.floor(Math.random()*WORDS.length)];
+    f.style.left = ((ev.clientX || window.innerWidth/2) - 30) + 'px';
+    f.style.top  = ((ev.clientY || window.innerHeight/2) - 20) + 'px';
+    document.body.appendChild(f);
+    setTimeout(function(){ f.remove(); }, 1550);
+
+    await submitSignal('scream', null);
+    setTimeout(fetchGlobalCounts, 2000);
+  });
+
+  /* ========== INITIAL LOAD ========== */
   fetchGlobalCounts();
-  setInterval(fetchGlobalCounts, 30000);
-
-  /* ========== SCREAM BUTTON ========== */
-  var scount = document.getElementById('scount');
-var screamBtn = document.getElementById('scream');
-var n = 0;
-var WORDS = ['AAAAAA','死ね！死ね！死ね！','!!!!!!','黙れ','NOISEY','AAAAAAAA'];
-
-screamBtn.addEventListener('click', async function(ev){
-  document.body.classList.add('shake');
-  setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
-
-  // Update local
-  n++;
-  scount.textContent = n;
-
-  // Create floating word particle
-  var f = document.createElement('span');
-  f.className = 'floaty';
-  f.textContent = WORDS[Math.floor(Math.random()*WORDS.length)];
-  f.style.left = (ev.clientX - 30) + 'px';
-  f.style.top  = (ev.clientY - 20) + 'px';
-  document.body.appendChild(f);
-  setTimeout(function(){ f.remove(); }, 1550);
-
-  // Send to Supabase
-  await submitSignal('scream', null);
-  fetchGlobalCounts();
-});
-
-  // Initial paint
+  setInterval(fetchGlobalCounts, 60000);
   paintMoods(false);
 
 })();
