@@ -3,48 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image" href="/assets/3628e352.gif">
-    <link rel="stylesheet" href="styles.css">
-<title>AID//LOG</title>
+<link rel="icon" type="image" href="/assets/BUcNTzP.gif">
+<link rel="stylesheet" href="aid.css">
+<title>AID//KIT — 助けを求める</title>
 </head>
 <body>
 <div class="fx grain" aria-hidden="true"></div>
 <div class="fx scan" aria-hidden="true"></div>
 <div class="fx vignette" aria-hidden="true"></div>
-    <!-- ══════════ TOP AREA ══════════ -->
+
+<!-- ══════════ TOP AREA ══════════ -->
 <header class="topbar">
   <div class="brand">
     <span class="mark">✚</span>
-    <span class="btitle glitch" data-text="VOID//LOG">VOID//LOG</span>
-    <span class="sub">心の掃き溜め — no tw, take care</span>
+    <span class="btitle glitch" data-text="AID//KIT">AID//KIT</span>
+    <span class="sub">助け — things that help, sometimes</span>
   </div>
   <nav class="topnav">
-    <a href="#feed">feed</a>
-    <a href="#states">states</a>
-    <a href="#rules">rules</a>
-    <a href="#help">help</a>
+    <a href="index.html">void//log</a>
+    <a href="guestbook.html">guestbook</a>
+    <a href="#help">numbers</a>
   </nav>
   <div class="status">
     <span class="dot"></span>
     <span id="clock">--:--:--</span>
-    <span class="badge">RAW EMOTIONS</span>
+    <span class="badge">NOT MONITORED</span>
   </div>
 </header>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>i'm still here <b>//</b> <i>still here, still here</i></span>
-    <span>寝れない <b>//</b> 3am again</span>
-    <span>do not perceive me <b>//</b> but also please look at me</span>
-    <span>too loud, too much <b>//</b> let it out, let it go</span>
-    <span>landmine girlboy <b>//</b> watch your step</span>
-    <span>screaming into the void since XXXX <b>//</b> it doesn't mind</span>
-    <span>i'm still here <b>//</b> <i>still here, still here</i></span>
-    <span>寝れない <b>//</b> 3am again</span>
-    <span>do not perceive me <b>//</b> but also please look at me</span>
-    <span>too loud, too much <b>//</b> let it out, let it go</span>
-    <span>landmine girlboy <b>//</b> watch your step</span>
-    <span>screaming into the void since XXXX <b>//</b> it doesn't mind</span>
+    <span>you don't have to be bad enough <b>//</b> there is no such thing</span>
+    <span>not a cure <b>//</b> just a moment</span>
+    <span>you can just say "i don't know why i called" <b>//</b> they're used to it</span>
+    <span>pick one thing <b>//</b> ignore the rest</span>
+    <span>you don't have to be bad enough <b>//</b> there is no such thing</span>
+    <span>not a cure <b>//</b> just a moment</span>
+    <span>you can just say "i don't know why i called" <b>//</b> they're used to it</span>
+    <span>pick one thing <b>//</b> ignore the rest</span>
   </div>
 </div>
 
@@ -54,143 +50,48 @@
   <!-- ───── LEFT ───── -->
   <aside class="col left">
     <section class="box">
-      <h2>index <em>don't bother</em></h2>
+      <h2>index</h2>
       <ul class="nav">
-        <li><a href="zero.html">about the webmaster</a></li>
-        <li><a href="rings.html">cliques / webrings</a></li>
-        <li><a href="misc.html">misc</a></li>
-        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="#now">if you need someone now</a></li>
+        <li><a href="#brakes">brakes</a></li>
+        <li><a href="#media">comfort media</a></li>
+        <li><a href="#reading">reading &amp; listening</a></li>
+        <li><a href="#tools">tools</a></li>
+        <li><a href="#help">every number</a></li>
       </ul>
     </section>
 
     <section class="box">
-      <h2>counters <em>self-reported</em></h2>
-      <div class="stat"><span>days upright</span><b>07</b></div>
-      <div class="stat"><span>hours slept (last)</span><b>2.5</b></div>
-      <div class="stat"><span>showers this week</span><b>2</b></div>
-      <div class="stat"><span>times outside</span><b>1</b></div>
-      <div class="stat"><span>unread messages</span><b class="hot">100</b></div>
-      <div class="stat"><span>blurbs logged</span><b id="logcount">02</b></div>
+      <h2>if it's an emergency <em>life-threatening</em></h2>
+      <div class="stat"><span>EU / most of europe</span><b class="hot">112</b></div>
+      <div class="stat"><span>UK</span><b class="hot">999</b></div>
+      <div class="stat"><span>US / canada</span><b class="hot">911</b></div>
+      <div class="stat"><span>japan</span><b class="hot">119</b></div>
+      <p class="tiny" style="margin:10px 0 0">if you are in immediate physical danger, that comes before anything on this page.</p>
     </section>
 
-    <section class="box">
-      <h2>filter by tags <em>click to activate</em></h2>
-      <p class="tiny">select multiple. click again to clear. keeps until refresh.</p>
-      <div class="tags" id="tagfilters">
-        <span class="tagchip jp" data-tag="空洞">空洞</span>
-        <span class="tagchip jp" data-tag="不安">不安</span>
-        <span class="tagchip jp" data-tag="不眠">不眠</span>
-        <span class="tagchip jp" data-tag="過呼吸">過呼吸</span>
-        <span class="tagchip jp" data-tag="解離">解離</span>
-        <span class="tagchip jp" data-tag="希死念慮">希死念慮</span>
-        <span class="tagchip jp" data-tag="引きこもり">引きこもり</span>
-        <span class="tagchip" data-tag="UNSENT">UNSENT</span>
-        <span class="tagchip" data-tag="3AM">3AM</span>
-        <span class="tagchip" data-tag="SMALL WIN">SMALL WIN</span>
-      </div>
-      <div id="filterbanner" class="filter-banner" style="display:none"></div>
-    </section>
-
-    <section class="box">
-      <h2>now playing <em>Kasane Teto</em></h2>
-      <div class="np">
-        <div class="tr">Deconversion</div>
-        <div class="ar">on repeat — 777 plays today</div>
-        <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </div>
-    </section>
-
-    <section class="box sticky-note" id="rules">
+    <section class="box sticky-note">
       <span class="tape" aria-hidden="true"></span>
-      <strong>HOUSE RULES</strong><br>
-      1. no performance.<br>
-      2. no fixing, no "have you tried-".<br>
-      3. write it ugly. write it raw.<br>
-      4. if it's in here, it's out of me.<br>
-      5. strangers: scroll to the bottom. <span class="bandage" aria-hidden="true"></span>
+      <strong>READ THIS FIRST</strong><br>
+      this page is a pile of things that have helped somebody, somewhere, once. it is not therapy, not diagnosis, not monitoring.<br><br>
+      nobody is watching this page. if you write to me through the guestbook i might not see it for days.<br><br>
+      take what works. leave the rest. <span class="bandage" aria-hidden="true"></span>
     </section>
   </aside>
 
   <!-- ───── CENTRE ───── -->
   <main class="col mid">
 
-    <section class="composer">
-      <label for="dump" class="tiny" style="display:block">type it, dump it, leave it.</label>
-      <textarea id="dump" placeholder="say the thing you can't say out loud. it doesn't have to make sense. it doesn't have to be brave."></textarea>
-      <div class="crow">
-        <button class="btn" id="release">release →</button>
-        <button class="btn ghost" id="wipe">wipe</button>
-        <span class="hint">stays on this device</span>
-      </div>
-    </section>
+    <!-- ── CRISIS LINES ── -->
+    <div class="feed-head" id="now">if you need someone right now</div>
 
-
-
-    <section class="feed" id="feedlist">
-
-
-
-    </section>
-  </main>
-
-  <!-- ───── RIGHT ───── -->
-  <aside class="col right">
-
-    <section class="box" id="states">
-      <h2>states of being <em>● live</em></h2>
-      <p class="tiny">tap a row to push it up. tap past 5 to reset it to zero.</p>
-      <div id="moods"></div>
-      <div class="moodfoot">
-        load: <b id="loadnum">0</b>/60
-        <span class="dom" id="domstate">— nothing registered —</span>
-      </div>
-    </section>
-
-    <section class="box">
-      <h2>void meter <em>pressure valve</em></h2>
-      <button class="screambtn" id="scream">scream</button>
-      <div class="counter"><b id="scount">0</b> screams logged tonight</div>
-    </section>
-
-    <section class="box">
-      <h2>tonight's weather</h2>
-      <div class="stat"><span>inside</span><b>heavy brain fog</b></div>
-      <div class="stat"><span>outside</span><b>chilly</b></div>
-      <div class="stat"><span>forecast</span><b class="hot">no change</b></div>
-      <div class="stat"><span>curtains</span><b>semi-closed</b></div>
-    </section>
-
-    <section class="box">
-      <h2>things that help <em>sometimes</em></h2>
-      <ul class="nav">
-        <li><a href="#dump">write it down here</a></li>
-        <li><a href="#help">the number at the bottom</a></li>
-        <li><a href="/pages/aid.html">cold water on wrists</a></li>
-        <li><a href="#states">one song, lights off</a></li>
-        <li><a href="#states">text one person, one line</a></li>
-      </ul>
-      <p class="tiny" style="margin:10px 0 0">not a cure. just surviving.</p>
-    </section>
-  </aside>
-</div>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer id="help">
-  <div class="fwrap">
-    <div class="fnote">
-      <h3>if you stumbled in here</h3>
-      <p>this page wasn't written for you. it's not a performance — the place i put things so they stop living in my chest.</p>
-      <p>but if you recognised yourself in any of it, that's worth something. you don't have to be "bad enough" to call. you don't have to be articulate. you can just say "i don't know why i called." they're used to it.</p>
-      <p class="sig">✚ void//log — no tw, no exit</p>
-    </div>
-
-    <div class="help">
-      <h4>someone to talk to — free, confidential, 24/7</h4>
+    <section class="help" style="margin-bottom:6px">
+      <h4>free, confidential, 24/7 — you don't have to be articulate</h4>
       <div class="helpgrid">
         <div class="hcard">
           <div class="r">United States</div>
           <div class="n">988</div>
-          <div class="d">Call or text. Veterans press 1 · Spanish press 2 · LGBTQ+ youth under 25 press 3 or text YOUTH</div>
+          <div class="d">Call or text. Veterans press 1 · Spanish press 2 · LGBTQ+ youth under 25 press 3 or text YOUTH. Or text HOME to 741741 for Crisis Text Line.</div>
         </div>
         <div class="hcard">
           <div class="r">UK &amp; Ireland</div>
@@ -200,7 +101,27 @@
         <div class="hcard">
           <div class="r">Canada</div>
           <div class="n">988</div>
-          <div class="d">Suicide Crisis Helpline — call or text.</div>
+          <div class="d">Suicide Crisis Helpline — call or text. Under 30? Kids Help Phone: 1-800-668-6868, or text CONNECT to 686868.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">LGBTQ+ young people (US)</div>
+          <div class="n">1-866-488-7386</div>
+          <div class="d">The Trevor Project — call, or text START to 678-678. 24/7, free, confidential.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">France</div>
+          <div class="n">3114</div>
+          <div class="d">Numéro national de prévention du suicide — free, 24/7.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Germany</div>
+          <div class="n">0800 111 0 111</div>
+          <div class="d">TelefonSeelsorge — free, anonymous, 24/7. Second line: 0800 111 0 222. Also reachable on 116 123.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Netherlands</div>
+          <div class="n">113</div>
+          <div class="d">113 Zelfmoordpreventie — or 0800 0113. Phone and chat, 24/7.</div>
         </div>
         <div class="hcard">
           <div class="r">Japan — English</div>
@@ -219,7 +140,341 @@
         </div>
       </div>
       <div class="more">
-        elsewhere → <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> lists free crisis lines in over 130 countries. If you're in immediate physical danger, call your local emergency number.
+        somewhere else → <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> lists free crisis lines in over 130 countries. <a href="https://befrienders.org" target="_blank" rel="noopener noreferrer">befrienders.org</a> has a worldwide directory too.
+      </div>
+    </section>
+
+    <!-- ── BRAKES ── -->
+    <div class="feed-head" id="brakes">brakes — things that interrupt the spiral</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>temperature</h3>
+        <p>the fastest lever you have. cold shocks the nervous system out of a loop.</p>
+        <ul>
+          <li><a href="#" data-scroll="#">cold water on your wrists</a><small> 30 seconds, both wrists, under the tap</small></li>
+          <li><a href="#" data-scroll="#">hold something frozen</a><small> ice cube, frozen peas, a cold can</small></li>
+          <li><a href="#" data-scroll="#">splash your face</a><small> cold, not lukewarm. it matters.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>breathing</h3>
+        <p>not to calm down. just to give your body something to do.</p>
+        <ul>
+          <li><a href="#" data-scroll="#breathbox">box breathing pacer</a><small> there's one in the sidebar →</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=guided+breathing+exercise+5+minutes" target="_blank" rel="noopener noreferrer">guided breathing videos</a><small> someone else counting for you helps</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=yoga+nidra+for+sleep" target="_blank" rel="noopener noreferrer">yoga nidra</a><small> lying down, guided, no effort required</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>senses</h3>
+        <p>when you've gone somewhere far away and need to come back to the room.</p>
+        <ul>
+          <li><a href="#" data-scroll="#">5-4-3-2-1 grounding</a><small> checklist in the sidebar →</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=asmr+no+talking" target="_blank" rel="noopener noreferrer">asmr, no talking</a><small> sound without demands</small></li>
+          <li><a href="https://youtu.be/gsTHvLwqVuA?si=rqrIgyVGHfalqXhz" target="_blank" rel="noopener noreferrer">deep pressure</a><small> weighted blanket, tight hoodie, heavy duvet</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>movement</h3>
+        <p>doesn't have to be exercise. just move a little.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/results?search_query=gentle+stretching+for+beginners+10+minutes" target="_blank" rel="noopener noreferrer">ten minutes of stretching</a><small> on the floor is fine</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=walking+at+home+workout+low+impact" target="_blank" rel="noopener noreferrer">walking in place</a><small> no leaving the house required</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=dance+workout+no+talking" target="_blank" rel="noopener noreferrer">dance badly, alone</a><small> curtains closed is allowed</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>hands busy</h3>
+        <p>for when thinking is the problem. give the hands a job instead.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/results?search_query=origami+easy+beginner" target="_blank" rel="noopener noreferrer">fold paper</a><small> origami, or just crumple and unfold</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=how+to+draw+doodles+for+beginners" target="_blank" rel="noopener noreferrer">draw badly</a><small> scribbling counts</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=cooking+one+pot+recipe+easy" target="_blank" rel="noopener noreferrer">make one thing</a><small> food, tea, toast. something you can eat after.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>one small thing</h3>
+        <p>if everything is too much, don't pick the right thing. pick any thing.</p>
+        <ul>
+          <li><a href="#" data-random="#">spin the wheel</a><small> sidebar →, one suggestion at a time</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=rain+sounds+for+sleeping+10+hours" target="_blank" rel="noopener noreferrer">rain sounds</a><small> put it on and lie down</small></li>
+          <li><a href="guestbook.html">write it into the void</a><small> somewhere to put it that isn't inside you</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── MEDIA ── -->
+    <div class="feed-head" id="media">comfort media — things to put in your ears</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>ambient &amp; endless</h3>
+        <p>no lyrics, no structure, nothing to follow. good for lying still.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/results?search_query=brian+eno+music+for+airports" target="_blank" rel="noopener noreferrer"> Music for Airports</a><small> Brian Eno — the original calm record</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=10+hours+of+rain+on+a+window" target="_blank" rel="noopener noreferrer"> rain on a window</a><small> ten hours, if you need ten hours</small></li>
+          <li><a href="https://asoftmurmur.com/" target="_blank" rel="noopener noreferrer">a soft murmur</a><small> mix your own rain, wind, waves</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>somewhere else</h3>
+        <p>for when your room becomes too stuffy.</p>
+        <ul>
+          <li><a href="https://radio.garden/" target="_blank" rel="noopener noreferrer">radio garden</a><small> spin a globe, land in a random city's radio</small></li>
+          <li><a href="https://window-swap.com/" target="_blank" rel="noopener noreferrer">window swap</a><small> look out of a stranger's window somewhere else</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=walking+tour+tokyo+rain+4k" target="_blank" rel="noopener noreferrer">walking tours</a><small> follow someone through a city you've never been to</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>playlists</h3>
+        <p>these are search links, not curated lists. swap them for your own — it'll be better.</p>
+        <ul>
+          <li><a href="https://open.spotify.com/search/lofi" target="_blank" rel="noopener noreferrer">lofi</a><small> the reliable standby</small></li>
+          <li><a href="https://open.spotify.com/search/quiet%20piano" target="_blank" rel="noopener noreferrer">quiet piano</a><small> for when you don't want lyrics</small></li>
+          <li><a href="https://open.spotify.com/search/sad%20songs" target="_blank" rel="noopener noreferrer">the sad ones</a><small> sometimes you need to be met where you are</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>watch something</h3>
+        <p>low stakes, no cliffhangers, nothing that will ambush you.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/results?search_query=restoration+videos+no+talking" target="_blank" rel="noopener noreferrer">restoration videos</a><small> rusty thing becomes clean thing</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=slow+tv+ambient+footage" target="_blank" rel="noopener noreferrer">slow tv</a><small> eight hours of a journey. that's the whole show.</small></li>
+          <li><a href="https://neal.fun/" target="_blank" rel="noopener noreferrer">neal.fun</a><small> small weird toys to poke at</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── READING ── -->
+    <div class="feed-head" id="reading">reading &amp; listening — other people who get it</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>organisations</h3>
+        <p>actual charities with actual resources, not influencers.</p>
+        <ul>
+          <li><a href="https://www.mind.org.uk/" target="_blank" rel="noopener noreferrer">Mind (UK)</a><small> plain-language guides on everything</small></li>
+          <li><a href="https://www.nami.org/" target="_blank" rel="noopener noreferrer">NAMI (US)</a><small> family and peer support, lots of writing</small></li>
+          <li><a href="https://www.thetrevorproject.org/resources/" target="_blank" rel="noopener noreferrer">Trevor Project resources</a><small> for LGBTQ+ folks, and for people who love them</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>directories</h3>
+        <p>for finding help that isn't a phone line.</p>
+        <ul>
+          <li><a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer"> find a helpline</a><small> by country, by topic</small></li>
+          <li><a href="https://befrienders.org" target="_blank" rel="noopener noreferrer"> befrienders worldwide</a><small> emotional support centres, globally</small></li>
+          <li><a href="https://www.iasp.info/" target="_blank" rel="noopener noreferrer">IASP</a><small> international association — crisis centre listings</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>words</h3>
+        <p>essays and archives about being unwell, written by people who were there.</p>
+        <ul>
+          <li><a href="https://archive.org/" target="_blank" rel="noopener noreferrer">internet archive</a><small> old zines, old websites, old everything</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=mental+health+zine+reading" target="_blank" rel="noopener noreferrer">zine readings</a><small> people reading their own work aloud</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=podcast+about+living+with+depression" target="_blank" rel="noopener noreferrer">podcasts</a><small> company for a long night</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>other people's corners</h3>
+        <p>personal sites like this one. the whole point of the web, honestly.</p>
+        <ul>
+          <li><a href="https://neocities.org/browse" target="_blank" rel="noopener noreferrer">neocities browse</a><small> thousands of handmade sites</small></li>
+          <li><a href="index.html">my void//log</a><small> you're welcome here</small></li>
+          <li><a href="guestbook.html">the guestbook</a><small> leave something, read what others left</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── TOOLS ── -->
+    <div class="feed-head" id="tools">tools — things that do a bit of the work</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>tracking</h3>
+        <p>not to grade yourself. just to notice patterns you can't see from inside a bad day.</p>
+        <ul>
+          <li><a href="https://daylio.net/" target="_blank" rel="noopener noreferrer">Daylio</a><small> mood logging without writing paragraphs</small></li>
+          <li><a href="https://finchcare.com/" target="_blank" rel="noopener noreferrer">Finch</a><small> self-care as a small creature you keep alive</small></li>
+          <li><a href="https://www.insighttimer.com/" target="_blank" rel="noopener noreferrer">Insight Timer</a><small> free meditations, huge library</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>make the screen kinder</h3>
+        <p>half of feeling awful at 3am is the light.</p>
+        <ul>
+          <li><a href="https://justgetflux.com/" target="_blank" rel="noopener noreferrer">f.lux</a><small> warms your screen as the night goes on</small></li>
+          <li><a href="https://darkreader.org/" target="_blank" rel="noopener noreferrer">Dark Reader</a><small> makes bright sites dark</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=night+mode+screen+settings" target="_blank" rel="noopener noreferrer">your OS night mode</a><small> usually already built in, usually off</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>getting unstuck</h3>
+        <p>for the specific paralysis of having twelve things to do and doing none.</p>
+        <ul>
+          <li><a href="https://www.youtube.com/results?search_query=pomodoro+timer+25+minutes" target="_blank" rel="noopener noreferrer">a 25-minute timer</a><small> then stop, whether or not it's finished</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=body+doubling+study+with+me" target="_blank" rel="noopener noreferrer">body doubling</a><small> someone else working quietly on camera</small></li>
+          <li><a href="https://www.youtube.com/results?search_query=how+to+break+a+task+into+smaller+steps" target="_blank" rel="noopener noreferrer">cut it smaller</a><small> "shower" is really eleven tasks</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>offline</h3>
+        <p>the ones that work when the wifi is off and you have no phone.</p>
+        <ul>
+          <li><a href="#" data-scroll="#">5-4-3-2-1</a><small> works anywhere, costs nothing</small></li>
+          <li><a href="#" data-scroll="#">box breathing</a><small> four counts each way</small></li>
+          <li><a href="#" data-scroll="#">one small thing</a><small> when choosing is the hard part</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <div class="aid-note">
+      <strong>a note on this page:</strong> i'm not a doctor and this isn't treatment. these are things that have helped me or people i know, gathered in one place so you don't have to go looking while you're already underwater. if something here doesn't help, that's not a failure — it just means it wasn't the right one for you. try the next.
+    </div>
+
+  </main>
+
+  <!-- ───── RIGHT ───── -->
+  <aside class="col right">
+
+    <section class="box" id="breathbox">
+      <h2>breathing pacer <em>box breathing</em></h2>
+      <p class="tiny">four counts in, four hold, four out, four hold. follow the circle or ignore it and just count.</p>
+      <div class="breath">
+        <div class="breath-ring" id="breathRing"><span class="breath-label" id="breathLabel">ready</span></div>
+        <button class="btn" id="breathToggle" style="width:100%">start</button>
+        <span class="breath-sub" id="breathCycle">cycle 0</span>
+      </div>
+    </section>
+
+    <section class="box" id="groundbox">
+      <h2>5-4-3-2-1 <em>come back to the room</em></h2>
+      <p class="tiny">go slowly. actually look at the things.</p>
+      <div class="check" id="checklist"></div>
+      <button class="check-reset" id="checkReset">reset the list</button>
+    </section>
+
+    <section class="box" id="randombox">
+      <h2>one small thing <em>no choosing required</em></h2>
+      <div class="onesmall" id="oneSmall"><p> press the button. do whatever it says if you can.</p></div>
+      <button class="btn" id="oneSmallBtn" style="width:100%;margin-top:10px">give me one thing</button>
+    </section>
+
+    <section class="box">
+      <h2>elsewhere on this site</h2>
+      <ul class="nav">
+        <li><a href="index.html">void//log</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="webmaster.html">webmaster</a></li>
+        <li><a href="friends.html">friends &amp; webring</a></li>
+        <li><a href="misc.html">misc</a></li>
+      </ul>
+      <p class="tiny" style="margin:10px 0 0">not a cure. just a moment.</p>
+    </section>
+
+  </aside>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="help">
+  <div class="fwrap">
+    <div class="fnote">
+      <h3>every number, in one place</h3>
+      <p>if you scrolled this far, you're probably looking for something specific. here's the whole list again, plus the ones for places i couldn't fit above.</p>
+      <p>you don't have to be "bad enough" to call. you don't have to be articulate. you can just say "i don't know why i called." they're used to it.</p>
+      <p class="sig">✚ aid//kit — take what works, leave the rest</p>
+    </div>
+
+    <div class="help">
+      <h4>free, confidential, 24/7</h4>
+      <div class="helpgrid">
+        <div class="hcard">
+          <div class="r">United States</div>
+          <div class="n">988</div>
+          <div class="d">Call or text. Veterans press 1 · Spanish press 2 · LGBTQ+ youth under 25 press 3 or text YOUTH. Crisis Text Line: text HOME to 741741.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">UK &amp; Ireland</div>
+          <div class="n">116 123</div>
+          <div class="d">Samaritans — free from any phone, any hour. Or text SHOUT to 85258 in the UK.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Canada</div>
+          <div class="n">988</div>
+          <div class="d">Suicide Crisis Helpline — call or text. Kids Help Phone: 1-800-668-6868, or text CONNECT to 686868.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">LGBTQ+ young people (US)</div>
+          <div class="n">1-866-488-7386</div>
+          <div class="d">The Trevor Project — call, or text START to 678-678.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">France</div>
+          <div class="n">3114</div>
+          <div class="d">Numéro national de prévention du suicide — free, 24/7.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Germany</div>
+          <div class="n">0800 111 0 111</div>
+          <div class="d">TelefonSeelsorge — free, anonymous, 24/7. Second line: 0800 111 0 222.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Netherlands</div>
+          <div class="n">113</div>
+          <div class="d">113 Zelfmoordpreventie — or 0800 0113. Phone and chat, 24/7.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Japan — English</div>
+          <div class="n">0800-300-8355</div>
+          <div class="d">TELL Lifeline (toll free). Chat also available on their site.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Japan — 日本語</div>
+          <div class="n">0570-783-556</div>
+          <div class="d">いのちの電話 / Inochi no Denwa. よりそいホットライン: 0120-279-338 (press 2 for non-Japanese).</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Australia</div>
+          <div class="n">13 11 14</div>
+          <div class="d">Lifeline Australia — 24/7 crisis support.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Emergency — life-threatening</div>
+          <div class="n">112 / 999 / 911</div>
+          <div class="d">112 works across the EU and most of Europe. 999 in the UK, 911 in the US and Canada, 119 in Japan.</div>
+        </div>
+        <div class="hcard">
+          <div class="r">Anywhere else</div>
+          <div class="n">findahelpline.com</div>
+          <div class="d">Free crisis lines in over 130 countries. befrienders.org has a worldwide directory too.</div>
+        </div>
+      </div>
+      <div class="more">
+        links → <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> · <a href="https://befrienders.org" target="_blank" rel="noopener noreferrer">befrienders.org</a> · <a href="https://www.iasp.info/" target="_blank" rel="noopener noreferrer">iasp.info</a>
       </div>
     </div>
   </div>
@@ -238,279 +493,161 @@
   }
   tick(); setInterval(tick,1000);
 
-  /* ========== TAG FILTERING ========== */
-  var activeFilters = new Set();
-  var tagChips = document.querySelectorAll('#tagfilters .tagchip');
-  var blurbs = document.querySelectorAll('.blurb');
-  var divider = document.querySelector('.divider');
-  var banner = document.getElementById('filterbanner');
-  var feedCountEl = document.getElementById('feedcount');
+  /* ========== BREATHING PACER ========== */
+  var ring = document.getElementById('breathRing');
+  var bLabel = document.getElementById('breathLabel');
+  var bToggle = document.getElementById('breathToggle');
+  var bCycle = document.getElementById('breathCycle');
 
-  // Restore saved filters (fails if localStorage blocked)
-  try{
-    var savedFilters = localStorage.getItem('voidlog.filters');
-    if(savedFilters){
-      var arr = JSON.parse(savedFilters);
-      if(Array.isArray(arr)){
-        arr.forEach(function(tag){ activeFilters.add(tag); });
-      }
-    }
-  }catch(e){}
-
-  function paintTagChips(){
-    tagChips.forEach(function(chip){
-      var tag = chip.dataset.tag;
-      if(activeFilters.has(tag)){
-        chip.classList.add('active');
-      }else{
-        chip.classList.remove('active');
-      }
-    });
-    updateFeed();
-    saveFilters();
-  }
-
-  tagChips.forEach(function(chip){
-    chip.addEventListener('click', function(){
-      var tag = chip.dataset.tag;
-      if(activeFilters.has(tag)){
-        activeFilters.delete(tag);
-      }else{
-        activeFilters.add(tag);
-      }
-      paintTagChips();
-    });
-  });
-
-  function updateFeed(){
-    var filterArray = Array.from(activeFilters);
-
-    // Show/hide filter banner
-    if(filterArray.length > 0){
-      banner.style.display = 'flex';
-      banner.innerHTML = 'filtered by: ' + filterArray.join(' + ') +
-        '<span class="clear" id="clearfilters">clear all ×</span>';
-      document.getElementById('clearfilters').addEventListener('click', function(){
-        activeFilters.clear();
-        paintTagChips();
-      });
-    }else{
-      banner.style.display = 'none';
-    }
-
-    // Count visible entries
-    var visibleCount = 0;
-
-    // Filter blurbs (pinned always stays visible)
-    blurbs.forEach(function(blurb){
-      var blurbTags = (blurb.dataset.tags || '').split(' ').filter(Boolean);
-      var isPinned = blurb.classList.contains('pinned');
-
-      if(filterArray.length === 0){
-        // No filters = show all
-        blurb.classList.remove('hidden');
-        visibleCount++;
-      }else{
-        // Check if blurb matches any active filter
-        var matches = filterArray.some(function(tag){
-          return blurbTags.includes(tag);
-        });
-
-        if(matches || isPinned){
-          blurb.classList.remove('hidden');
-          visibleCount++;
-        }else{
-          blurb.classList.add('hidden');
-        }
-      }
-    });
-
-    // Dim the divider if no visible blorbs near it
-    if(divider){
-      var prev = divider.previousElementSibling;
-      var next = divider.nextElementSibling;
-      var dividerVisible = true;
-      if(prev && prev.classList.contains('blurb')){
-        dividerVisible = !prev.classList.contains('hidden');
-      }
-      if(next && next.classList.contains('blurb')){
-        dividerVisible = dividerVisible && !next.classList.contains('hidden');
-      }
-      divider.style.opacity = dividerVisible ? '1' : '0';
-    }
-
-    feedCountEl.textContent = visibleCount + ' entr' + (visibleCount === 1 ? 'y' : 'ies');
-  }
-
-  function saveFilters(){
-    try{
-      localStorage.setItem('voidlog.filters', JSON.stringify(Array.from(activeFilters)));
-    }catch(e){}
-  }
-
-  paintTagChips();
-
-  /* ========== MOOD PANEL ========== */
-  // Note to self: these labels must match the tag chips exactly for auto-tagging to work
-  var MOODS = [
-    {jp:'空洞',  en:'void'},
-    {jp:'不安',  en:'anxiety'},
-    {jp:'不眠',  en:'insomnia'},
-    {jp:'過呼吸', en:'panic'},
-    {jp:'解離',  en:'dissociation'},
-    {jp:'怒り',  en:'rage'},
-    {jp:'無気力', en:'apathy'},
-    {jp:'自傷衝動', en:'urge'},
-    {jp:'希死念慮', en:'ideation'},
-    {jp:'繋がりたい', en:'wanting'}
+  var PHASES = [
+    {t:'breathe in', ms:4000, scale:1.32},
+    {t:'hold',       ms:4000, scale:1.32},
+    {t:'breathe out',ms:4000, scale:0.82},
+    {t:'hold',       ms:4000, scale:0.82}
   ];
-  var levels = MOODS.map(function(){ return 0; });
 
-  // Restore mood levels
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bIdx = 0, bTimer = null, bRunning = false, bCycles = 0;
+
+  function breathStep(){
+    var p = PHASES[bIdx % PHASES.length];
+    bLabel.textContent = p.t;
+    if(!reduceMotion){
+      ring.style.transitionDuration = p.ms + 'ms';
+      ring.style.transform = 'scale(' + p.scale + ')';
+    }
+    bIdx++;
+    if(bIdx % PHASES.length === 0){
+      bCycles++;
+      bCycle.textContent = 'cycle ' + bCycles;
+    }
+    bTimer = setTimeout(breathStep, p.ms);
+  }
+
+  function breathStart(){
+    bRunning = true;
+    bIdx = 0; bCycles = 0;
+    bToggle.textContent = 'stop';
+    ring.classList.add('running');
+    bCycle.textContent = 'cycle 0';
+    breathStep();
+  }
+
+  function breathStop(){
+    bRunning = false;
+    clearTimeout(bTimer);
+    bToggle.textContent = 'start';
+    ring.classList.remove('running');
+    bLabel.textContent = 'ready';
+    ring.style.transitionDuration = '600ms';
+    ring.style.transform = 'scale(1)';
+  }
+
+  bToggle.addEventListener('click', function(){
+    if(bRunning){ breathStop(); } else { breathStart(); }
+  });
+
+  /* ========== GROUNDING CHECKLIST ========== */
+  var ITEMS = [
+    'five things you can see',
+    'four things you can touch',
+    'three things you can hear',
+    'two things you can smell',
+    'one thing you can taste'
+  ];
+  var checkHost = document.getElementById('checklist');
+  var checkState = ITEMS.map(function(){ return false; });
+
   try{
-    var saved = localStorage.getItem('voidlog.moods');
-    if(saved){
-      var arr = JSON.parse(saved);
-      if(Array.isArray(arr) && arr.length === levels.length) levels = arr;
+    var savedCheck = localStorage.getItem('aid.grounding');
+    if(savedCheck){
+      var arr = JSON.parse(savedCheck);
+      if(Array.isArray(arr) && arr.length === checkState.length) checkState = arr;
     }
   }catch(e){}
 
-  var host = document.getElementById('moods');
-  var rows = [];
+  var checkBoxes = [];
 
-  MOODS.forEach(function(m,i){
-    var row = document.createElement('div');
-    row.className = 'moodrow';
-    row.setAttribute('role','button');
-    row.setAttribute('tabindex','0');
+  ITEMS.forEach(function(label, i){
+    var wrap = document.createElement('label');
+    wrap.className = 'check-item';
+    var box = document.createElement('input');
+    box.type = 'checkbox';
+    box.checked = !!checkState[i];
+    if(box.checked) wrap.classList.add('done');
+    var span = document.createElement('span');
+    span.textContent = label;
+    wrap.appendChild(box);
+    wrap.appendChild(span);
+    checkHost.appendChild(wrap);
+    checkBoxes.push({box:box, wrap:wrap});
 
-    var lb = document.createElement('div');
-    lb.className = 'lb';
-    lb.innerHTML = m.jp + ' <small>' + m.en + '</small>';
-
-    var lv = document.createElement('div');
-    lv.className = 'lv';
-
-    var segs = document.createElement('div');
-    segs.className = 'segs';
-    for(var s=0;s<5;s++){ segs.appendChild(document.createElement('i')); }
-
-    row.appendChild(lb); row.appendChild(lv); row.appendChild(segs);
-    host.appendChild(row);
-    rows.push({row:row, lv:lv, segs:segs});
-
-    function bump(){
-      levels[i] = (levels[i] >= 5) ? 0 : levels[i] + 1;
-      paintMoods();
-    }
-    row.addEventListener('click', bump);
-    row.addEventListener('keydown', function(ev){
-      if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); bump(); }
+    box.addEventListener('change', function(){
+      checkState[i] = box.checked;
+      if(box.checked){ wrap.classList.add('done'); } else { wrap.classList.remove('done'); }
+      try{ localStorage.setItem('aid.grounding', JSON.stringify(checkState)); }catch(e){}
     });
   });
 
-  function paintMoods(){
-    var total = 0, top = 0;
-    rows.forEach(function(r,i){
-      var v = levels[i];
-      total += v;
-      r.lv.textContent = v ? v + '/5' : '·';
-      var cells = r.segs.children;
-      for(var c=0;c<cells.length;c++){
-        cells[c].className = (c < v) ? 'on' : '';
-      }
-      if(v > levels[top]) top = i;
+  document.getElementById('checkReset').addEventListener('click', function(){
+    checkState = ITEMS.map(function(){ return false; });
+    checkBoxes.forEach(function(c){
+      c.box.checked = false;
+      c.wrap.classList.remove('done');
     });
-    document.getElementById('loadnum').textContent = total;
-    var dom = document.getElementById('domstate');
-    if(total === 0){
-      dom.textContent = '— nothing registered —';
+    try{ localStorage.setItem('aid.grounding', JSON.stringify(checkState)); }catch(e){}
+  });
+
+  /* ========== ONE SMALL THING ========== */
+  var ACTIONS = [
+    'drink a glass of water. slowly. all of it.',
+    'open a window for sixty seconds.',
+    'run cold water over your wrists for thirty seconds.',
+    'put on one song and do nothing else until it ends.',
+    'text one person. it can just say "hi".',
+    'stand up and stretch your arms above your head.',
+    'eat something. anything. even a little.',
+    'lie on the floor for two minutes. floors are underrated.',
+    'step outside and take one breath of outside air.',
+    'name five things you can see from where you are.',
+    'wash your face with cold water.',
+    'turn off one light. just one.',
+    'put your phone on DND for ten minutes.',
+    'make a hot drink and hold it with both hands.'
+  ];
+  var oneSmall = document.getElementById('oneSmall');
+  var lastPick = -1;
+
+  document.getElementById('oneSmallBtn').addEventListener('click', function(){
+    var pick = lastPick;
+    if(ACTIONS.length > 1){
+      while(pick === lastPick){ pick = Math.floor(Math.random() * ACTIONS.length); }
     }else{
-      dom.textContent = MOODS[top].jp + ' / ' + MOODS[top].en + ' leads tonight';
+      pick = 0;
     }
-    document.documentElement.style.setProperty('--glow','rgba(255,95,158,'+(0.16 + Math.min(total,60)/60*0.34).toFixed(2)+')');
-    try{ localStorage.setItem('voidlog.moods', JSON.stringify(levels)); }catch(e){}
-  }
-  paintMoods();
-
-  /* ========== COMPOSER / RELEASE ========== */
-  var dump = document.getElementById('dump');
-  var list = document.getElementById('feedlist');
-  var logcount = document.getElementById('logcount');
-  var seq = 2; // start from current log
-
-  function nowStamp(){
-    var d = new Date();
-    return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
-  }
-
-  function dominantTag(){
-    var top = -1, idx = -1;
-    levels.forEach(function(v,i){ if(v > top){ top = v; idx = i; } });
-    return (top > 0) ? MOODS[idx].jp : '';
-  }
-
-  function release(){
-    var text = dump.value.trim();
-    if(!text) return;
-    seq++;
-    var art = document.createElement('article');
-    art.className = 'blurb fresh';
-
-    var tags = dominantTag();
-    art.dataset.tags = tags;
-
-    var head = document.createElement('header');
-    var t = document.createElement('time');
-    t.textContent = nowStamp();
-    var tg = document.createElement('span');
-    tg.className = 'tg';
-    tg.textContent = tags || '未分類';
-    var ix = document.createElement('span');
-    ix.className = 'idx';
-    ix.textContent = '#' + String(seq).padStart(3,'0');
-    head.appendChild(t); head.appendChild(tg); head.appendChild(ix);
-
+    lastPick = pick;
+    oneSmall.innerHTML = '';
     var p = document.createElement('p');
-    p.textContent = text;
-
-    var foot = document.createElement('footer');
-    foot.className = 'bfoot';
-    var a = document.createElement('span'); a.textContent = '↳ just released';
-    var b = document.createElement('span'); b.textContent = '↳ ' + text.length + ' chars out of my head';
-    foot.appendChild(a); foot.appendChild(b);
-
-    art.appendChild(head); art.appendChild(p); art.appendChild(foot);
-    list.insertBefore(art, list.firstChild);
-
-    dump.value = '';
-    logcount.textContent = String(seq).padStart(2,'0');
-    updateFeed(); // refresh counts after adding a log
-  }
-
-  document.getElementById('release').addEventListener('click', release);
-  document.getElementById('wipe').addEventListener('click', function(){ dump.value = ''; dump.focus(); });
-  dump.addEventListener('keydown', function(ev){
-    if((ev.ctrlKey || ev.metaKey) && ev.key === 'Enter') release();
+    p.textContent = ACTIONS[pick];
+    oneSmall.appendChild(p);
   });
 
-  /* ========== SCREAM BUTTON ========== */
-  var scount = document.getElementById('scount');
-  var n = 0;
-  var WORDS = ['ENOUGH','死ね！死ね！死ね！','!!!!!!','黙れ','NOISEY','AAAAAAAA!!'];
-  document.getElementById('scream').addEventListener('click', function(ev){
-    n++;
-    scount.textContent = n;
-    document.body.classList.add('shake');
-    setTimeout(function(){ document.body.classList.remove('shake'); }, 430);
+  /* ========== IN-PAGE JUMPS ========== */
+  document.querySelectorAll('[data-scroll]').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var target = document.querySelector(el.getAttribute('data-scroll'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'center'}); }
+    });
+  });
 
-    var f = document.createElement('span');
-    f.className = 'floaty';
-    f.textContent = WORDS[Math.floor(Math.random()*WORDS.length)];
-    f.style.left = (ev.clientX - 30) + 'px';
-    f.style.top  = (ev.clientY - 20) + 'px';
-    document.body.appendChild(f);
-    setTimeout(function(){ f.remove(); }, 1550);
+  document.querySelectorAll('[data-random]').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var target = document.querySelector(el.getAttribute('data-random'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'center'}); }
+      document.getElementById('oneSmallBtn').click();
+    });
   });
 
 })();
