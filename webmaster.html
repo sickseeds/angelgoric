@@ -1,12 +1,471 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image" href="/assets/lashes4.gif">
+<link rel="stylesheet" href="webmaster.css">
+<title>WEBMASTER — 運営者</title>
+</head>
+<body>
+<div class="fx grain" aria-hidden="true"></div>
+<div class="fx scan" aria-hidden="true"></div>
+<div class="fx vignette" aria-hidden="true"></div>
+
+<!-- ══════════ TOP AREA ══════════ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">✚</span>
+    <span class="btitle glitch" data-text="WEBMASTER">WEBMASTER</span>
+    <span class="sub">運営者 — who runs this place</span>
+  </div>
+  <nav class="topnav">
+    <a href="index.html">void//log</a>
+    <a href="guestbook.html">guestbook</a>
+    <a href="aid.html">aid//kit</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <div class="status">
+    <span class="dot"></span>
+    <span id="clock">--:--:--</span>
+    <span class="badge">HIGH AF</span>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>built while high <b>//</b> kinda maintained</span>
+    <span>単独で <b>//</b> one person on caffeine</span>
+    <span>no ads, no trackers, no cookies <b>//</b> nothing tracking you here</span>
+    <span>if it's broken, tell me <b>//</b> i'll probably fix it</span>
+    <span>built while high <b>//</b> kinda maintained</span>
+    <span>単独で <b>//</b> one person on caffeine</span>
+    <span>no ads, no trackers, no cookies <b>//</b> nothing tracking you here</span>
+    <span>if it's broken, tell me <b>//</b> i'll probably fix it</span>
+  </div>
+</div>
+
+<!-- ══════════ SHELL ══════════ -->
+<div class="shell">
+
+  <!-- ───── LEFT ───── -->
+  <aside class="col left">
+    <section class="box">
+      <h2>index</h2>
+      <ul class="nav">
+        <li><a href="#who">who</a></li>
+        <li><a href="#why">why this exists</a></li>
+        <li><a href="#built">how it's built</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#changes">changelog</a></li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>quick facts <em>the boring stuff</em></h2>
+      <div class="stat"><span>opened</span><b>2026</b></div>
+      <div class="stat"><span>online for</span><b id="daysOnline">—</b></div>
+      <div class="stat"><span>people</span><b>1</b></div>
+      <div class="stat"><span>framework</span><b>linux</b></div>
+      <div class="stat"><span>analytics</span><b>none</b></div>
+      <div class="stat"><span>ads</span><b>blocked</b></div>
+      <div class="stat"><span>cookies</span><b>i ate them</b></div>
+    </section>
+
+    <section class="box sticky-note">
+      <span class="tape" aria-hidden="true"></span>
+      <strong>ABOUT//THIS</strong><br>
+      this is the "hello, i made this" page. it exists so the site has a soul attached to it, and so you know who's reading the guestbook.<br><br>
+      i'm slow to reply. it's not you, i am just always sick and exhausted. <span class="bandage" aria-hidden="true"></span>
+    </section>
+  </aside>
+
+  <!-- ───── CENTRE ───── -->
+  <main class="col mid">
+
+    <!-- ── HERO ── -->
+    <section class="wm-hero">
+      <h1>hi. i made this.</h1>
+      <img src="/assets/ah.png">
+      <p>this is a small personal website to vent, scream, be a mess. allowing the more volatile part of me an outlet.  it's a corner of the internet i built for myself, and i left the door open in case anyone else wanted to sit here with me.</p>
+      <p>everything here was written by studying others, borrowing code, and making it my own. i'm not a professional developer. i just like making things, and i've been doing it long enough that the things mostly work now. kinda. tumblr themeing started it.</p>
+      <p><mark>nothing here is tracking you.</mark> no analytics, no ad networks, no cookies. the only thing that leaves your browser is what you deliberately type into the guestbook or the mood panel, and that's explained a bit further down.</p>
+    </section>
+
+    <!-- ── WHO ── -->
+    <div class="feed-head" id="who">who</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>the basics</h3>
+        <ul>
+          <li><a href="#" data-scroll="#contact">names i go by</a><small> [ Void, Dove, Lucelia, Zero. whatever. ]</small></li>
+          <li><a href="#" data-scroll="#contact">pronouns</a><small> [ he // hym ]</small></li>
+          <li><a href="#" data-scroll="#contact">where</a><small> [ NA // midwest ]</small></li>
+          <li><a href="#" data-scroll="#contact">timezone</a> <small><span id="myTime">—</span></small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>things i like</h3>
+        <ul>
+          <li><a href="#" data-scroll="#built">coding</a><small> obviously</small></li>
+          <li><a href="#" data-scroll="#built">music</a><small> i always have to have music</small></li>
+          <li><a href="#" data-scroll="#built">horror</a><small> all kinds, but especially found footage, cosmic and analog horror.</small></li>
+          <li><a href="#" data-scroll="#built">cultures</a><small> i love learning of the many beautiful cultures.</small></li>
+          <li><a href="#" data-scroll="#built">video games</a><small> survival horror, rpg, rhythm, visual novels, fps', mobas, etc.</small></li>
+          <li><a href="#" data-scroll="#built">sleeping</a><small> i already sleep so so much, yet i find it comforting still sometimes.</small></li>
+          <li><a href="#" data-scroll="#built">caffeine</a><small> energy drinks, coffee, tea.</small></li>
+          <li><a href="#" data-scroll="#built">art</a><small> all forms of art. i love to escape into other worlds.</small></li>
+          <li><a href="#" data-scroll="#built">anime + manga</a><small> have been watching and reading since the early 2000's.</small></li>
+          <li><a href="#" data-scroll="#built">drugs</a><small> specifically psychedelics.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>how i am online</h3>
+        <ul>
+          <li><a href="#" data-scroll="#contact">slow replies</a><small> days, sometimes weeks. not personal.</small></li>
+          <li><a href="#" data-scroll="#contact">no DMs</a><small> unless we are best friends//close.</small></li>
+          <li><a href="guestbook.html">guestbook is open</a><small> the easiest way to reach me.</small></li>
+          <li><a href="#" data-scroll="#contact">i read everything</a><small> even when i don't answer. i see everything.</small></li>
+          <li><a href="#" data-scroll="#contact">i am a bitch</a><small> i often times can come off very apathetic, or cold and uncaring.</small></li>
+          <li><a href="#" data-scroll="#contact">no friends</a><small> i am not actively looking for more friends. you'd be better off.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>disclaimers</h3>
+        <ul>
+          <li><a href="aid.html">i'm not a professional</a><small> nothing here is medical advice.</small></li>
+          <li><a href="aid.html">this site isn't monitored</a><small> nobody is watching you.</small></li>
+          <li><a href="#" data-scroll="#contact">opinions are mine</a><small> nobody else's.</small></li>
+          <li><a href="#" data-scroll="#built">things break</a><small> tell me and i'll fix it.</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── WHY ── -->
+    <div class="feed-head" id="why">why this exists</div>
+
+    <section class="wm-hero" style="margin-bottom:6px">
+      <h1 style="font-size:19px">because the web got boring</h1>
+      <img src="/assets/screaming.png">
+      <p>most of the internet is now six websites wearing different hats. everything is a feed, everything relies on algorithms, everything wants something from you. it stopped feeling like a place you could escape into.</p>
+      <p>the indie web and personal websites are the opposite of that. they're slow, they're weird, they're unfinished, and nobody's grading them. i grew up on those — the fan pages, the shrines, the forums, the sites with a hit counter and a guestbook and a page that says whatever it wants with no explanation. this is me making another one of those.</p>
+      <p>it also does something practical. the void//log is where i put things so they stop living in my chest. the guestbook is where other people can put theirs. the aid page is a pile of things that helped me, left out in case they help someone else. <mark>that's the whole architecture.</mark> put it down, and leave it.</p>
+    </section>
+
+    <!-- ── BUILT ── -->
+    <div class="feed-head" id="built">how it's built</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>hosting</h3>
+        <ul>
+          <li><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">github pages</a><small> serves the files. always on keeping the lights on.</small></li>
+          <li><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">git</a><small> every change is a commit. i can undo my mistakes if needed.</small></li>
+          <li><a href="https://phcode.dev/" target="_blank" rel="noopener noreferrer">phoenix code</a><small> it is never closed. constantly juggling projects.</small></li>
+          <li><a href="https://porkbun.com/" target="_blank" rel="noopener noreferrer">porkbun</a><small> where my domain came from. now i am hungry.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>the code</h3>
+        <ul>
+          <li><a href="#" data-scroll="#changes">html &amp; css</a><small> view source if you're curious. it's readable.</small></li>
+          <li><a href="#" data-scroll="#changes">javascript</a><small> i am a masochist.</small></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">css variables</a><small> the whole palette lives in eight lines at the top.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>the shared bits</h3>
+        <ul>
+          <li><a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">supabase</a><small> database for the guestbook and the counters.</small></li>
+          <li><a href="guestbook.html">row level security</a><small> the database itself decides what's allowed, not the browser.</small></li>
+          <li><a href="guestbook.html">moderation</a><small> nothing appears until i've read and approved it.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>the look</h3>
+        <ul>
+          <li><a href="#" data-scroll="#changes">film grain &amp; scanlines</a><small> made with css gradients, no image files.</small></li>
+          <li><a href="#" data-scroll="#changes">system fonts</a><small> no google fonts. for once.</small></li>
+          <li><a href="#" data-scroll="#changes">reduced-motion</a><small> if your OS says stop animating, this site listens.</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <div class="feed-head" id="contact">contact</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>easiest way</h3>
+        <p>the guestbook. anonymous by default, moderated by me.</p>
+        <ul>
+          <li><a href="guestbook.html">leave something in the guestbook</a><small> no account, no email required.</small></li>
+          <li><a href="guestbook.html">say hi, or say nothing much</a><small> it doesn't have to be profound.</small></li>
+          <li><a href="guestbook.html">tell me if something's broken</a><small> genuinely useful, genuinely welcome.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>email</h3>
+        <p>sometimes slower, but private.</p>
+        <ul>
+          <li><a href="#" class="wm-mail" id="mailLink">loading…</a><small> opens your mail app.</small></li>
+          <li><a href="#" id="copyMail">copy the address</a><small> if you'd rather use webmail.</small></li>
+          <li><a href="#" data-scroll="#who">what i'll answer</a><small> questions, hellos, inquiries, etc. no discourse or debates.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>elsewhere</h3>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">XMPP</a><small> insectyuri@chat.virtualgalleria.net</small></li>
+          <li><a href="https://sickseeds.netlify.app/" target="_blank" rel="noopener noreferrer">sickseeds</a><small> my main website.</small></li>
+          <li><a href="friends.html">friends &amp; webring</a><small> people i actually check up on and enjoy.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>please don't</h3>
+        <ul>
+          <li><a href="#" data-scroll="#who">no scraping</a><small> especially not the guestbook.</small></li>
+          <li><a href="#" data-scroll="#who">no reposting entries</a><small> people wrote those trusting the safety of my site.</small></li>
+          <li><a href="#" data-scroll="#who">no unsolicited advice</a><small> to me or to anyone in the guestbook.</small></li>
+          <li><a href="#" data-scroll="#who">no ai training crawlers</a><small> if you can help it. :1</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ── CHANGELOG - add more above if needed later ── -->
+    <div class="feed-head" id="changes">changelog — what and when</div>
+
+    <section class="gb-list" style="margin-bottom:6px">
+
+      <article class="gb-entry">
+        <header>
+          <time>31 oct 2026</time>
+          <span class="anon">webmaster page</span>
+          <span class="idx">#005</span>
+        </header>
+        <p>added this page. wrote down who i am and why the site exists, mostly so future-me remembers.</p>
+      </article>
+
+      <article class="gb-entry">
+        <header>
+          <time>30 oct 2026</time>
+          <span class="anon">aid//kit</span>
+          <span class="idx">#004</span>
+        </header>
+        <p>built the aid page. breathing pacer, grounding checklist, one-small-thing button, and every helpline number i could verify in one place. this one mattered the most.</p>
+      </article>
+
+      <article class="gb-entry">
+        <header>
+          <time>29 oct 2026</time>
+          <span class="anon">guestbook</span>
+          <span class="idx">#003</span>
+        </header>
+        <p>guestbook went live. supabase backend, three posts per hour per address, everything held for review before it shows. shared scream counter and mood panel too, so the numbers tick up for everyone at once.</p>
+      </article>
+
+      <article class="gb-entry">
+        <header>
+          <time>26 oct 2026</time>
+          <span class="anon">void//log</span>
+          <span class="idx">#002</span>
+        </header>
+        <p>made the void log. dark palette, mood panel, scream button, tag filtering. the whole reason the site exists, really — somewhere to put things so they stop living in my chest.</p>
+      </article>
+
+      <article class="gb-entry">
+        <header>
+          <time>25 oct 2026</time>
+          <span class="anon">first commit</span>
+          <span class="idx">#001</span>
+        </header>
+        <p>site went up. mostly empty. the medical diary page came first, pastel pink, much softer than everything in here. but wanted to execute this landmine website idea. it was originally gonna be a page to my main website. but decided to make it it's own thing.</p>
+      </article>
+
+    </section>
+
+    <div class="aid-note">
+      <strong>one last thing:</strong> if you're reading this and you've been thinking about making your own website — do it. it doesn't have to be good. it doesn't have to be polished or even fully finished. its not for a grade, and the version of the web where everyone has their own strange little corner is a better web than the one where everybody has a profile on the same six sites. steal the layout. view the source. change everything. in the end, use the tools before you. even years back, everyone was borrowing and using code from one another. make it your own, practice it, study it. break it. re-do it. over and over. don't feel ashamed for using a layout generator, or someone else's layout. even i still will use those if i want to. think smarter, not harder.
+    </div>
+
+  </main>
+
+  <!-- ───── RIGHT ───── -->
+  <aside class="col right">
+
+    <section class="box">
+      <h2>right now <em>i am</em></h2>
+      <div class="stat"><span>doing</span><b>sick</b></div>
+      <div class="stat"><span>listening</span><a href="https://youtu.be/xRL7k2aAotU"><b>IMPENDING</b></a></div>
+      <div class="stat"><span>sleeping</span><b class="hot">too much</b></div>
+      <div class="stat"><span>reply backlog</span><b class="hot">yes</b></div>
+      <div class="stat"><span>mood</span><b>anxious + apathetic</b></div>
+      <p class="tiny" style="margin:10px 0 0">last updated: 11-01-2026</p>
+    </section>
+
+    <section class="box">
+      <h2>site stats <em>roughly</em></h2>
+      <div class="stat"><span>days online</span><b id="daysOnline2">—</b></div>
+      <div class="stat"><span>pages</span><b>6</b></div>
+      <div class="stat"><span>trackers</span><b>0</b></div>
+      <div class="stat"><span>third parties</span><b>1</b></div>
+      <div class="stat"><span>lines of code</span><b>~900</b></div>
+      <p class="tiny" style="margin:10px 0 0">the one third party is supabase, and only on the pages that need to remember things.</p>
+    </section>
+
+    <section class="box">
+      <h2>credits &amp; thanks</h2>
+      <ul class="nav">
+        <li><a href="https://filegarden.com/" target="_blank" rel="noopener noreferrer">filegarden</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">w3schools</a></li>
+        <li><a href="https://sadgrl.online/" target="_blank" rel="noopener noreferrer">sadgrl's webmastery guides</a></li>
+        <li><a href="https://32bit.cafe/" target="_blank" rel="noopener noreferrer">32-bit cafe</a></li>
+        <li><a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline</a></li>
+      </ul>
+      <p class="tiny" style="margin:10px 0 0">don't gatekeep. we are all constantly learning.</p>
+    </section>
+
+    <section class="box">
+      <h2>elsewhere on this site</h2>
+      <ul class="nav">
+        <li><a href="index.html">void//log</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="aid.html">aid//kit</a></li>
+        <li><a href="friends.html">friends//webring</a></li>
+        <li><a href="misc.html">misc</a></li>
+      </ul>
+    </section>
+
+  </aside>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="fwrap">
+    <div class="fnote">
+      <h3>thanks for reading</h3>
+      <p>you made it to the bottom of the "about the person who made this" page, which is a strange thing to do on a stranger's website. i appreciate it.</p>
+      <p>if you want to say something back, the guestbook is open and anonymous. if you just wanted to look around, that's fine too — that's most of what the web is supposed to be for.</p>
+      <p class="sig">✚ webmaster — boygirl failure, landmine, menhera</p>
+    </div>
+
+    <div class="help">
+      <h4>if you came here looking for help instead</h4>
+      <p style="margin:0 0 10px;font-size:13px;color:var(--ash-dim);line-height:1.6">this page isn't the one you want. the aid page has helplines, grounding tools, and things that help sometimes — free, confidential, 24/7, in a lot of countries.</p>
+      <div class="btns" style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="aid.html" class="btn">go to aid//kit</a>
+        <a href="guestbook.html" class="btn ghost">or leave something</a>
+      </div>
+      <div class="more">
+        elsewhere → <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> lists free crisis lines in over 130 countries.
+      </div>
+    </div>
+  </div>
+</footer>
+  <script>
+(function(){
+  "use strict";
+
+  var CONTACT_EMAIL = 'insectyuri@pm.me';
+  var SITE_START    = '2026-10-25';
+
+  /* ========== CLOCK ========== */
+  var clock = document.getElementById('clock');
+  function tick(){
+    var d = new Date();
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    if(clock){ clock.textContent = p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds()); }
+  }
+  tick(); setInterval(tick,1000);
+
+  /* ========== LOCAL TIME ========== */
+  var myTime = document.getElementById('myTime');
+  if(myTime){
+    var now = new Date();
+    var offMin = -now.getTimezoneOffset();
+    var sign = offMin >= 0 ? '+' : '-';
+    var absMin = Math.abs(offMin);
+    var hh = Math.floor(absMin / 60);
+    var mm = absMin % 60;
+    var label = 'UTC' + sign + hh + (mm ? ':' + String(mm).padStart(2,'0') : '');
+    myTime.textContent = label;
+  }
+
+  /* ========== DAYS ONLINE ========== */
+  function daysSince(dateStr){
+    var start = new Date(dateStr + 'T00:00:00');
+    if(isNaN(start.getTime())) return '—';
+    var diff = Math.floor((Date.now() - start.getTime()) / 86400000);
+    if(diff < 0) return '—';
+    if(diff === 0) return 'today';
+    return diff + (diff === 1 ? ' day' : ' days');
+  }
+  var d1 = document.getElementById('daysOnline');
+  var d2 = document.getElementById('daysOnline2');
+  var daysLabel = daysSince(SITE_START);
+  if(d1) d1.textContent = daysLabel;
+  if(d2) d2.textContent = daysLabel;
+
+  /* ========== EMAIL ========== */
+  var mailLink = document.getElementById('mailLink');
+  var copyBtn = document.getElementById('copyMail');
+
+  if(mailLink){
+    mailLink.textContent = CONTACT_EMAIL;
+    mailLink.setAttribute('href', 'mailto:' + CONTACT_EMAIL);
+  }
+
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var done = function(){
+        copyBtn.textContent = 'copied ✓';
+        copyBtn.classList.add('ok');
+        setTimeout(function(){
+          copyBtn.textContent = 'copy the address';
+          copyBtn.classList.remove('ok');
+        }, 1900);
+      };
+
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(CONTACT_EMAIL).then(done).catch(function(){
+          window.prompt('copy this address:', CONTACT_EMAIL);
+        });
+      }else{
+        window.prompt('copy this address:', CONTACT_EMAIL);
+      }
+    });
+  }
+
+  /* ========== PAGE JUMPS ========== */
+  document.querySelectorAll('[data-scroll]').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      var sel = el.getAttribute('data-scroll');
+      var target = document.querySelector(sel);
+      if(target){
+        ev.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+})();
+</script>
+</body>
 </html>

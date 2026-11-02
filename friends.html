@@ -1,12 +1,362 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image" href="/assets/eQpnT5Y.gif">
+<link rel="stylesheet" href="friends.css">
+<title>FRIENDS — 仲間</title>
+</head>
+<body>
+<div class="fx grain" aria-hidden="true"></div>
+<div class="fx scan" aria-hidden="true"></div>
+<div class="fx vignette" aria-hidden="true"></div>
+
+<!-- ══════════ TOP AREA ══════════ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">✚</span>
+    <span class="btitle glitch" data-text="FRIENDS">FRIENDS</span>
+    <span class="sub">仲間 — who i read</span>
+  </div>
+  <nav class="topnav">
+    <a href="index.html">void//log</a>
+    <a href="guestbook.html">guestbook</a>
+    <a href="aid.html">aid//kit</a>
+  </nav>
+  <div class="status">
+    <span class="dot"></span>
+    <span id="clock">--:--:--</span>
+    <span class="badge">LINK LIST</span>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>websites are still a thing <b>//</b> apparently</span>
+    <span>you belong somewhere <b>//</b> even online</span>
+    <span>link freely <b>//</b> credit where due</span>
+    <span>these are the ones i like <b>//</b> you might like them too</span>
+    <span>websites are still a thing <b>//</b> apparently</span>
+    <span>you belong somewhere <b>//</b> even online</span>
+    <span>link freely <b>//</b> credit where due</span>
+    <span>these are the ones i like <b>//</b> you might like them too</span>
+  </div>
+</div>
+
+<!-- ══════════ SHELL ══════════ -->
+<div class="shell">
+
+  <!-- ───── LEFT ───── -->
+  <aside class="col left">
+    <section class="box">
+      <h2>index</h2>
+      <ul class="nav">
+        <li><a href="#my-sites">my sites</a></li>
+        <li><a href="#friends">friends</a></li>
+        <li><a href="#webrings">webrings i'm in</a></li>
+        <li><a href="#places">other places</a></li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>about this page</h2>
+      <p class="tiny">i don't keep a webring. i just link to places i actually enjoy, and other places worth visiting.</p>
+      <div class="stat"><span>sites listed</span><b id="siteCount">—</b></div>
+      <div class="stat"><span>last updated</span><b id="lastUpdate">—</b></div>
+    </section>
+
+    <section class="box sticky-note">
+      <span class="tape" aria-hidden="true"></span>
+      <strong>HOW TO BE ON HERE</strong><br>
+      just ask. or don't, and i'll find you anyway.<br>
+      if you have a personal site and i like it, you're probably getting linked. <span class="bandage" aria-hidden="true"></span>
+    </section>
+  </aside>
+
+  <!-- ───── CENTRE ───── -->
+  <main class="col mid">
+
+    <!-- ── MY SITES ── -->
+    <div class="feed-head" id="my-sites">my sites</div>
+
+    <section class="friend-grid" style="margin-bottom:6px">
+
+      <!-- MAIN -->
+      <article class="friend-card featured">
+        <header>
+          <span class="friend-name">sickseeds</span>
+          <span class="friend-status">★ main site</span>
+        </header>
+        <p class="friend-desc">my main website.</p>
+        <footer>
+          <a href="https://sickseeds.netlify.app" class="btn">visit →</a>
+        </footer>
+      </article>
+
+      <!-- OTHER SITES I HAVE -->
+      <article class="friend-card">
+        <header>
+          <span class="friend-name">morute//traumacore webring</span>
+          <span class="friend-status">always open</span>
+        </header>
+        <p class="friend-desc">a webring i own based around the aesthetics morute and traumacore.</p>
+        <footer>
+          <a href="https://morbid-survivors.netlify.app/" class="btn">visit →</a>
+        </footer>
+      </article>
+
+      <article class="friend-card">
+        <header>
+          <span class="friend-name">site name</span>
+          <span class="friend-status">text</span>
+        </header>
+        <p class="friend-desc">description here.</p>
+        <footer>
+          <a href="#" class="btn">visit →</a>
+        </footer>
+      </article>
+
+    </section>
+
+    <!-- ── FRIENDS ── -->
+    <div class="feed-head" id="friends">friends</div>
+
+    <section class="friend-grid" style="margin-bottom:6px">
+
+      <!-- FRIEND 1 -->
+      <article class="friend-card">
+        <header>
+          <span class="friend-name">[ first friend's name ]</span>
+          <span class="friend-status">text</span>
+        </header>
+        <p class="friend-desc">[ short description ]</p>
+        <footer>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn">visit →</a>
+          <a href="#" class="ghost" title="rss/feed" data-placeholder="rss">📑</a>
+        </footer>
+      </article>
+
+      <!-- FRIEND 2 -->
+      <article class="friend-card">
+        <header>
+          <span class="friend-name">[ second friend's name ]</span>
+          <span class="friend-status">text</span>
+        </header>
+        <p class="friend-desc">[ short description ]</p>
+        <footer>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn">visit →</a>
+          <a href="#" class="ghost" title="rss/feed">📑</a>
+        </footer>
+      </article>
+
+      <!-- ADD MORE FRIEND CARDS ABOVE THIS LINE -->
+
+      <!-- PLACEHOLDER -->
+      <article class="friend-card empty-state" id="emptyState">
+        <p class="empty-msg">nothing here yet —</p>
+        <p class="empty-hint">want to be on this list? just ask.</p>
+      </article>
+
+    </section>
+
+    <!-- ── WEBRINGS ── -->
+    <div class="feed-head" id="webrings">webrings i'm in</div>
+
+    <section class="friend-grid" style="margin-bottom:6px">
+
+      <!-- WEBRING 1 -->
+      <article class="friend-card webring-card">
+        <header>
+          <span class="friend-name">[ webring name ]</span>
+          <span class="friend-status">text</span>
+        </header>
+        <p class="friend-desc">[ brief description ]</p>
+        <footer>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn">enter ring →</a>
+        </footer>
+      </article>
+
+      <!-- ADD MORE WEBRING CARDS -->
+
+      <article class="friend-card empty-state" id="webringEmpty">
+        <p class="empty-msg">i'm not in any webrings yet</p>
+        <p class="empty-hint">would i join one? maybe someday.</p>
+      </article>
+
+    </section>
+
+    <!-- ── OTHER PLACES ── -->
+    <div class="feed-head" id="places">other places worth visiting</div>
+
+    <section class="aid-grid" style="margin-bottom:6px">
+
+      <div class="aid-card">
+        <h3>handmade webs</h3>
+        <p>directories and collections of personal sites like this one.</p>
+        <ul>
+          <li><a href="https://neocities.org/browse" target="_blank" rel="noopener noreferrer">neocities</a><small> thousands of handmade pages, browse by tag.</small></li>
+          <li><a href="https://wiby.me/" target="_blank" rel="noopener noreferrer">wiby</a><small> a search engine for old-school sites.</small></li>
+          <li><a href="https://marginalia-search.com/" target="_blank" rel="noopener noreferrer">marginalia</a><small> no ads, no tracking, just sites.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>rings &amp; communities</h3>
+        <p>larger networks of interlinked personal sites.</p>
+        <ul>
+          <li><a href="https://webring.xxiivv.com/" target="_blank" rel="noopener noreferrer">vv's webring</a><small> the big one, hundreds of sites.</small></li>
+          <li><a href="https://thehtml.review/" target="_blank" rel="noopener noreferrer">the html review</a><small> literature that happens to be websites.</small></li>
+          <li><a href="https://32bit.cafe/" target="_blank" rel="noopener noreferrer">32-bit cafe</a><small> community-curated webring.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>archives</h3>
+        <p>for remembering how the web used to look like.</p>
+        <ul>
+          <li><a href="https://archive.org/web/" target="_blank" rel="noopener noreferrer">wayback machine</a><small> any website, from any era.</small></li>
+          <li><a href="https://gifcities.org/" target="_blank" rel="noopener noreferrer">gifcities</a><small> geocities gif archive.</small></li>
+          <li><a href="https://oldweb.today/#19960101/http://geocities.com/" target="_blank" rel="noopener noreferrer">old web simulator</a><small> browse with a retro browser.</small></li>
+        </ul>
+      </div>
+
+      <div class="aid-card">
+        <h3>useless gems</h3>
+        <p>pure play, no purpose except delight.</p>
+        <ul>
+          <li><a href="https://radio.garden/" target="_blank" rel="noopener noreferrer">radio garden</a><small> the world's radio stations on a globe</small></li>
+          <li><a href="https://neal.fun/" target="_blank" rel="noopener noreferrer">neal.fun</a><small> small interactive toys</small></li>
+          <li><a href="https://window-swap.com/" target="_blank" rel="noopener noreferrer">window swap</a><small> look out a stranger's window somewhere else</small></li>
+          <li><a href="https://zoomquilt.org/" target="_blank" rel="noopener noreferrer">zoomquilt</a><small> an endless zooming painting</small></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <div class="aid-note">
+      <strong>about linking:</strong> if you have a site and you want to be here, just tell me. if i like it, you're in. and if you link back to this page, i appreciate that, but i won't ask for it.
+    </div>
+
+  </main>
+
+  <!-- ───── RIGHT ───── -->
+  <aside class="col right">
+
+    <section class="box">
+      <h2>want in?</h2>
+      <p class="tiny">have a personal site? want to be on this list? it's one message.</p>
+      <a href="mailto:hello@example.com" class="btn" id="askEmail">ask via email</a>
+      <p class="tiny" style="margin-top:10px">or just leave something in the guestbook with your url.</p>
+    </section>
+
+    <section class="box">
+      <h2>stats</h2>
+      <div class="stat"><span>sites listed</span><b id="statSites">—</b></div>
+      <div class="stat"><span>webrings</span><b id="statWebrings">0</b></div>
+      <div class="stat"><span>updates</span><b id="statUpdates">—</b></div>
+      <p class="tiny" style="margin:10px 0 0">i update this whenever i remember, which is irregular.</p>
+    </section>
+
+    <section class="box">
+      <h2>elsewhere on this site</h2>
+      <ul class="nav">
+        <li><a href="index.html">void//log</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="aid.html">aid//kit</a></li>
+        <li><a href="webmaster.html">webmaster</a></li>
+        <li><a href="misc.html">misc</a></li>
+      </ul>
+    </section>
+
+  </aside>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="fwrap">
+    <div class="fnote">
+      <h3>thanks for clicking around</h3>
+      <p>if you landed here from another site in the webring, welcome. if you found us through search or accident or a stranger's recommendation, also welcome. this is supposed to feel like a neighbourhood, not a destination.</p>
+      <p>leave a mark in the guestbook if you want. or don't. do what makes you comfy.</p>
+      <p class="sig">✚ friends — link freely, credit where due</p>
+    </div>
+
+    <div class="help">
+      <h4>add your site</h4>
+      <p style="margin:0 0 10px;font-size:13px;color:var(--ash-dim);line-height:1.6">have a personal site? want to be on this list? it's one message. just ask.</p>
+      <a href="mailto:hello@example.com" class="btn" id="askEmail2">email me</a>
+    </div>
+  </div>
+</footer>
+  <script>
+(function(){
+  "use strict";
+
+  /* ========== CONFIG ========== */
+  var CONTACT_EMAIL = 'insectyuri@pm.me';
+  var SITE_UPDATED = '2026-11-02';
+
+  /* ========== CLOCK ========== */
+  var clock = document.getElementById('clock');
+  function tick(){
+    var d = new Date();
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    if(clock){ clock.textContent = p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds()); }
+  }
+  tick(); setInterval(tick,1000);
+
+  /* ========== SITES ========== */
+  function countCards(selector){
+    var cards = document.querySelectorAll(selector + ' .friend-card:not(.empty-state)');
+    return cards.length;
+  }
+  var siteCount = countCards('.friend-grid');
+  var statSites = document.getElementById('statSites');
+  var statSites2 = document.getElementById('siteCount');
+  if(statSites) statSites.textContent = siteCount;
+  if(statSites2) statSites2.textContent = siteCount;
+
+  var statWebrings = document.getElementById('statWebrings');
+  if(statWebrings){
+    var webringCount = countCards('#webrings .friend-grid');
+    statWebrings.textContent = webringCount;
+  }
+
+  var lastUpdate = document.getElementById('lastUpdate');
+  var statUpdates = document.getElementById('statUpdates');
+  if(lastUpdate || statUpdates){
+    var d = new Date(SITE_UPDATED);
+    if(!isNaN(d.getTime())){
+      var label = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
+      if(lastUpdate) lastUpdate.textContent = label;
+      if(statUpdates) statUpdates.textContent = label;
+    }
+  }
+
+  /* ========== EMAIL LINKS ========== */
+  var askEmail = document.getElementById('askEmail');
+  var askEmail2 = document.getElementById('askEmail2');
+  var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=friends%20page%20link&body=hi%20-%20i%20have%20a%20site%20and%20wanted%20to%20ask%20to%20be%20on%20your%20friends%20page.%20%0D%0A%0D%0Aurl%3A%20%0D%0Abrief%20description%3A';
+  if(askEmail) askEmail.setAttribute('href', mailto);
+  if(askEmail2) askEmail2.setAttribute('href', mailto);
+
+  /* ========== HIDE EMPTY STATES ========== */
+  var emptyFriends = document.getElementById('emptyState');
+  var emptyWebrings = document.getElementById('webringEmpty');
+  if(emptyFriends && siteCount <= 3){ emptyFriends.style.display = 'none'; }
+  if(emptyWebrings && countCards('#webrings .friend-grid') === 0){ emptyWebrings.style.display = 'none'; }
+
+  /* ========== PLACEHOLDER LINKS ========== */
+  document.querySelectorAll('[data-placeholder]').forEach(function(el){
+    el.addEventListener('click', function(ev){
+      ev.preventDefault();
+      el.style.color = '#5f5870';
+      el.setAttribute('tabindex','-1');
+    });
+  });
+
+})();
+</script>
+</body>
 </html>
