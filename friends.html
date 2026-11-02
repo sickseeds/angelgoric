@@ -80,7 +80,7 @@
     <!-- ── MY SITES ── -->
     <div class="feed-head" id="my-sites">my sites</div>
 
-    <section class="friend-grid" style="margin-bottom:6px">
+    <section class="friend-grid" id="friendsGrid" style="margin-bottom:6px">
 
       <!-- MAIN -->
       <article class="friend-card featured">
@@ -160,10 +160,10 @@
 
     </section>
 
-    <!-- ── WEBRINGS ── -->
-    <div class="feed-head" id="webrings">webrings i'm in</div>
+    <!-- ── WEBRINGS/CLIQUES ── -->
+    <div class="feed-head" id="webrings">webrings/cliques i'm in</div>
 
-    <section class="friend-grid" style="margin-bottom:6px">
+    <section class="friend-grid" id="webringsGrid" style="margin-bottom:6px">
 
       <!-- WEBRING 1 -->
       <article class="friend-card webring-card">
@@ -289,7 +289,7 @@
     </div>
   </div>
 </footer>
-  <script>
+<script>
 (function(){
   "use strict";
 
@@ -306,12 +306,19 @@
   }
   tick(); setInterval(tick,1000);
 
-  /* ========== SITES ========== */
-  function countCards(selector){
-    var cards = document.querySelectorAll(selector + ' .friend-card:not(.empty-state)');
-    return cards.length;
+  /* ========== DATE ========== */
+  function parseLocalDate(str){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(str);
+    return m ? new Date(+m[1], +m[2]-1, +m[3]) : null;
   }
-  var siteCount = countCards('.friend-grid');
+
+  /* ========== GRID IDs ========== */
+  function countCards(rootId){
+    var root = document.getElementById(rootId);
+    return root ? root.querySelectorAll('.friend-card:not(.empty-state)').length : 0;
+  }
+
+  var siteCount = countCards('friendsGrid');
   var statSites = document.getElementById('statSites');
   var statSites2 = document.getElementById('siteCount');
   if(statSites) statSites.textContent = siteCount;
@@ -319,15 +326,15 @@
 
   var statWebrings = document.getElementById('statWebrings');
   if(statWebrings){
-    var webringCount = countCards('#webrings .friend-grid');
+    var webringCount = countCards('webringsGrid');
     statWebrings.textContent = webringCount;
   }
 
   var lastUpdate = document.getElementById('lastUpdate');
   var statUpdates = document.getElementById('statUpdates');
   if(lastUpdate || statUpdates){
-    var d = new Date(SITE_UPDATED);
-    if(!isNaN(d.getTime())){
+    var d = parseLocalDate(SITE_UPDATED);
+    if(d && !isNaN(d.getTime())){
       var label = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
       if(lastUpdate) lastUpdate.textContent = label;
       if(statUpdates) statUpdates.textContent = label;
@@ -337,7 +344,7 @@
   /* ========== EMAIL LINKS ========== */
   var askEmail = document.getElementById('askEmail');
   var askEmail2 = document.getElementById('askEmail2');
-  var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=friends%20page%20link&body=hi%20-%20i%20have%20a%20site%20and%20wanted%20to%20ask%20to%20be%20on%20your%20friends%20page.%20%0D%0A%0D%0Aurl%3A%20%0D%0Abrief%20description%3A';
+  var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=friends%20page%20link&body=hi%20-%20i%20have%20a%20site%20and%20wanted%20to%20be%20on%20your%20friends%20page.%20%0D%0A%0D%0Aurl%3A%20%0D%0Abrief%20description%3A';
   if(askEmail) askEmail.setAttribute('href', mailto);
   if(askEmail2) askEmail2.setAttribute('href', mailto);
 
@@ -345,7 +352,7 @@
   var emptyFriends = document.getElementById('emptyState');
   var emptyWebrings = document.getElementById('webringEmpty');
   if(emptyFriends && siteCount <= 3){ emptyFriends.style.display = 'none'; }
-  if(emptyWebrings && countCards('#webrings .friend-grid') === 0){ emptyWebrings.style.display = 'none'; }
+  if(emptyWebrings && webringCount === 0){ emptyWebrings.style.display = 'none'; }
 
   /* ========== PLACEHOLDER LINKS ========== */
   document.querySelectorAll('[data-placeholder]').forEach(function(el){
